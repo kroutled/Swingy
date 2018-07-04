@@ -1,16 +1,14 @@
-package main.java.kroutled.model;
+package co.za.kroutled.model.characters;
 
-public class Hero {
+public class Character {
 
-    protected String    name;
-    protected int       lvl = 0;
-    protected int       xp = 0;
+   /* protected String    name;
     protected int       attack = 0;
     protected int       defense = 0;
     protected int       hitPoints = 0;
     protected int       maxHp = 100;
 
-    public Hero(String name)
+    public Character(String name)
     {
         this.name = name;
     }
@@ -50,5 +48,5 @@ public class Hero {
         return this.maxHp;
     }
 
-
+*/
 }

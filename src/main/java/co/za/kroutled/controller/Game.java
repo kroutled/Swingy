@@ -1,7 +1,8 @@
-package main.java.kroutled.controller;
+package co.za.kroutled.controller;
 
-import main.java.kroutled.model.Hero;
-import java.util.Scanner;
+//import co.za.kroutled.model.characters.Character;
+import co.za.kroutled.view.Window;
+//import java.util.Scanner;
 
 public class Game {
 
@@ -12,18 +13,19 @@ public class Game {
 
     public Game()
     {
-        String name;
-        Scanner scan = new Scanner(System.in);
-
-
+  /*      String name;
+        Scanner scan = new Scanner(System.in);*/
+        Window win = new Window();
+/*
         System.out.println("Welcome to the world!");
         dos(1000);
         System.out.println("Please enter your name hero...");
         name = scan.nextLine();
-        Hero myHero = new Hero(name);
+        Character myHero = new Character(name);
         dos(800);
         System.out.println("So you're " + myHero.getName() + ", I wonder...will you be the one to save our world?");
-        System.out.println("Now tell me " + myHero.getName() + );
+        System.out.println("Now tell me " + myHero.getName() +  ", do you have any skills"); */
+        win.createWindow();
     }
 
     public void dos(long time)
