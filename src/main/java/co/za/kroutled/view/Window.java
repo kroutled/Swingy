@@ -7,7 +7,7 @@ public class Window extends JFrame {
     public void createWindow()
     {
        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-       setSize(200, 200);
+       setSize(800, 600);
        setVisible(true);
        setTitle("Swingy");
     }
