@@ -1,7 +1,11 @@
+co/za/kroutled/controller/Battle.class
 co/za/kroutled/view/Window.class
-co/za/kroutled/model/artifacts/Weapon.class
+co/za/kroutled/model/artefacts/Helm.class
+co/za/kroutled/model/artefacts/Weapon.class
 co/za/kroutled/model/characters/Hero.class
+co/za/kroutled/model/artefacts/Armor.class
 co/za/kroutled/model/characters/Enemy.class
+co/za/kroutled/controller/Utilities.class
 co/za/kroutled/controller/Game.class
 co/za/kroutled/model/characters/Character.class
-co/za/kroutled/model/artifacts/Armor.class
+co/za/kroutled/model/Map.class

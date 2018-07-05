@@ -1,7 +1,11 @@
 /goinfre/kroutled/Desktop/Swingy/src/main/java/co/za/kroutled/model/characters/Character.java
 /goinfre/kroutled/Desktop/Swingy/src/main/java/co/za/kroutled/view/Window.java
+/goinfre/kroutled/Desktop/Swingy/src/main/java/co/za/kroutled/controller/Battle.java
 /goinfre/kroutled/Desktop/Swingy/src/main/java/co/za/kroutled/controller/Game.java
+/goinfre/kroutled/Desktop/Swingy/src/main/java/co/za/kroutled/controller/Utilities.java
 /goinfre/kroutled/Desktop/Swingy/src/main/java/co/za/kroutled/model/characters/Hero.java
-/goinfre/kroutled/Desktop/Swingy/src/main/java/co/za/kroutled/model/artifacts/Weapon.java
-/goinfre/kroutled/Desktop/Swingy/src/main/java/co/za/kroutled/model/artifacts/Armor.java
+/goinfre/kroutled/Desktop/Swingy/src/main/java/co/za/kroutled/model/artefacts/Armor.java
+/goinfre/kroutled/Desktop/Swingy/src/main/java/co/za/kroutled/model/artefacts/Weapon.java
+/goinfre/kroutled/Desktop/Swingy/src/main/java/co/za/kroutled/model/artefacts/Helm.java
 /goinfre/kroutled/Desktop/Swingy/src/main/java/co/za/kroutled/model/characters/Enemy.java
+/goinfre/kroutled/Desktop/Swingy/src/main/java/co/za/kroutled/model/Map.java
