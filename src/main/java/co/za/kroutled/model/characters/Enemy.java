@@ -1,6 +1,7 @@
 package co.za.kroutled.model.characters;
 
 import java.util.Random;
+import co.za.kroutled.model.Map;
 
 public class Enemy extends Character {
 
@@ -19,4 +20,12 @@ public class Enemy extends Character {
         this.hitPoints = enemyHP;
         this.maxHp = enemyHP;
     }
+
+    public void setEnemyPos(Map map)
+    {
+        Random rand = new Random();
+        this.setXPos(rand.nextInt(map.mapX));
+        this.setYPos(rand.nextInt(map.mapY));
+    }
+
 }

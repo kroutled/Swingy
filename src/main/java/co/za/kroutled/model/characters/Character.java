@@ -7,6 +7,9 @@ public class Character {
     protected int       defense;
     protected int       hitPoints;
     protected int       maxHp;
+    protected int       XPos;
+    protected int       YPos;
+
 
 
     public Character(){}
@@ -54,5 +57,25 @@ public class Character {
         this.hitPoints -= val;
         if (this.hitPoints < 0)
             this.hitPoints = 0;
+    }
+
+    public int  getXPos()
+    {
+        return this.XPos;
+    }
+
+    public int  getYPos()
+    {
+        return this.YPos;
+    }
+
+    public void setXPos(int val)
+    {
+        this.XPos = val;
+    }
+
+    public void setYPos(int val)
+    {
+        this.YPos = val;
     }
 }

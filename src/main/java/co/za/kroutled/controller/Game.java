@@ -39,6 +39,7 @@ public class Game {
         Utilities   utils = new Utilities();
         Enemy       myEnemy = new Enemy();
 
+
         if (args.equalsIgnoreCase("Cli")) {
                 System.out.println("Welcome to the world!");
                 utils.sleep(1000);
@@ -46,12 +47,14 @@ public class Game {
                 name = scan.nextLine();
                 Hero myHero = new Hero(name);
                 Map map = new Map(myHero);
+                map.setHeroPos();
+                myEnemy.setEnemyPos(map);
                 utils.sleep(1000);
                 System.out.println("So you're " + myHero.getName() + ", I wonder...will you be the one to save our world?");
 
-                runFight(myHero, myEnemy);
+                //runFight(myHero, myEnemy);
 
-                while (run == 1) {
+                while (run == 1 && map.inMap()) {
 
                     System.out.println("You can go: ");
                     System.out.println("NORTH: 'w'");
@@ -65,24 +68,25 @@ public class Game {
                     {
                         case "w":
                             map.moveUp();
-                            System.out.println(myHero.getY());
                             break;
                         case "s":
                             map.moveDown();
-                            System.out.println(myHero.getY());
                             break;
                         case "a":
                             map.moveLeft();
-                            System.out.println(myHero.getX());
                             break;
                         case "d":
                             map.moveRight();
-                            System.out.println(myHero.getX());
                             break;
                         case "exit":
                             run = 0;
                             break;
+                        default:
+                            System.out.println("Invalid input");
                     }
+                    System.out.printf("hx:%d, y:%d\n", myHero.getXPos(), myHero.getYPos());
+                    System.out.printf("ex:%d, y:%d\n", myEnemy.getXPos(), myEnemy.getYPos());
+
                 }
 
         }

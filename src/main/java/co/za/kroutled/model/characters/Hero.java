@@ -4,11 +4,8 @@ import  co.za.kroutled.model.artefacts.*;
 
 public class Hero extends Character {
 
-    public int lvl;
-    public int xp = 0;
-    public int  heroX = 0;
-    public int  heroY = 0;
-
+    private int  lvl;
+    private int  xp = 0;
 
     private Armor armor = new Armor();
     private Weapon weapon = new Weapon();
@@ -37,15 +34,15 @@ public class Hero extends Character {
         return this.xp;
     }
 
-    public int getX()
-    {
-        return this.heroX;
-    }
-
-    public int getY()
-    {
-        return this.heroY;
-    }
+//    public int getX()
+//    {
+//        return this.heroX;
+//    }
+//
+//    public int getY()
+//    {
+//        return this.heroY;
+//    }
 
     public int setXp(int val)
     {
