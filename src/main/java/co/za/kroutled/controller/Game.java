@@ -48,7 +48,8 @@ public class Game {
                 Hero myHero = new Hero(name);
                 Map map = new Map(myHero);
                 map.setHeroPos();
-                myEnemy.setEnemyPos(map);
+                map.enemyFarm();
+                map.callEnemy();
                 utils.sleep(1000);
                 System.out.println("So you're " + myHero.getName() + ", I wonder...will you be the one to save our world?");
 
@@ -84,11 +85,12 @@ public class Game {
                         default:
                             System.out.println("Invalid input");
                     }
+                    map.checkCollision(myHero);
+                    map.callEnemy();
                     System.out.printf("hx:%d, y:%d\n", myHero.getXPos(), myHero.getYPos());
                     System.out.printf("ex:%d, y:%d\n", myEnemy.getXPos(), myEnemy.getYPos());
 
                 }
-
         }
         else if (args.equalsIgnoreCase("Gui")) {
             Window win = new Window();
@@ -96,23 +98,6 @@ public class Game {
         }
         else
             System.out.println("Did you enter Gui or Cli?");
-    }
-
-    public void runFight(Hero hero, Enemy enemy)
-    {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Fight or Run?: ");
-        String  FoR = scan.nextLine();
-
-        switch (FoR)
-        {
-            case "fight" :
-                new Battle(hero, enemy);
-                break;
-            case "run" :
-                System.out.print("You've run away!");
-                break;
-        }
     }
 
 }
