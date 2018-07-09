@@ -42,6 +42,11 @@ public class Map {
         hero.setXPos(hero.getXPos() + 1);
     }
 
+    public Hero getHero()
+    {
+        return this.hero;
+    }
+
     public void setHeroPos()
     {
         hero.setXPos(mapX/2);
@@ -114,4 +119,12 @@ public class Map {
         }
 
     }
+
+//    public void newLevel(Hero hero)
+//    {
+//        this.level++;
+//
+//        hero.setXPos();
+//        hero.setYPos();
+//    }
 }

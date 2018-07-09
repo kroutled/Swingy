@@ -13,7 +13,7 @@ public class Hero extends Character {
 
     public Hero(String name)
     {
-        super (name, 20, 3, 100, 100);
+        super (name, 4, 3, 100, 100);
         this.lvl = 1;
         this.xp = 0;
         this.neededXP = (int) (this.lvl * 1000 + (Math.pow(this.lvl - 1 , 2) * 450));
