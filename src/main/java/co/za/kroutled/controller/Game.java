@@ -23,7 +23,8 @@ public class Game {
                 new Game(temp, filename);
 
             }
-        }catch (Exception e)
+        }
+        catch (Exception e)
         {
             System.out.println("No arguments have been passed");
         }
@@ -53,8 +54,6 @@ public class Game {
                 utils.sleep(1000);
                 System.out.println("So you're " + myHero.getName() + ", I wonder...will you be the one to save our world?");
 
-                //runFight(myHero, myEnemy);
-
                 while (run == 1 && map.inMap()) {
 
                     System.out.println("You can go: ");
@@ -79,6 +78,14 @@ public class Game {
                         case "d":
                             map.moveRight();
                             break;
+                        case "stat":
+                            System.out.println("Name: " + myHero.getName());
+                            System.out.println("Health: " + myHero.getHp() + "/" + myHero.getMaxHp());
+                            System.out.println("Level: " + myHero.getLvl());
+                            System.out.println("XP: " + myHero.getXp() + "/" + myHero.neededXP);
+                            System.out.println("Attack: " + myHero.getAttack());
+                            System.out.println("Defense: " + myHero.getDefense());
+                            break;
                         case "exit":
                             run = 0;
                             break;
@@ -88,8 +95,8 @@ public class Game {
                     map.checkCollision(myHero);
                     map.callEnemy();
                     System.out.printf("hx:%d, y:%d\n", myHero.getXPos(), myHero.getYPos());
-                    System.out.printf("ex:%d, y:%d\n", myEnemy.getXPos(), myEnemy.getYPos());
-
+                    if (myHero.getHp() == 0)
+                        run = 0;
                 }
         }
         else if (args.equalsIgnoreCase("Gui")) {
@@ -99,5 +106,4 @@ public class Game {
         else
             System.out.println("Did you enter Gui or Cli?");
     }
-
 }

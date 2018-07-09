@@ -14,7 +14,7 @@ public class Map {
     public int  mapY = mapX;
     List<Enemy> enemies  = new ArrayList<>();
 
-
+    private static int enemyCount = 0;
     private Hero hero;
 
     public Map (Hero hero)
@@ -50,7 +50,7 @@ public class Map {
 
     public boolean inMap()
     {
-        if (hero.getXPos() <= 0 || hero.getXPos() > mapX)
+        if (hero.getXPos() < 0 || hero.getXPos() > mapX)
             return false;
         else if (hero.getYPos() < 0 || hero.getYPos() > mapY)
             return false;
@@ -59,14 +59,20 @@ public class Map {
 
     public void enemyFarm()
     {
-        for (int i = 0; i < (level * 3); i++)
+        Random rand = new Random();
+        while (enemyCount < level * 3)
         {
             Enemy enemy = new Enemy();
-            Random rand = new Random();
+
             enemy.setXPos(rand.nextInt(mapX));
             enemy.setYPos(rand.nextInt(mapY));
-            if (enemy.getXPos() != mapX/2 && enemy.getYPos() != mapY/2)
+            if (enemy.getXPos() != hero.getXPos() && enemy.getYPos() != hero.getYPos()) {
+                System.out.println("Enemy spawned");
                 enemies.add(enemy);
+                enemyCount ++;
+            }
+            else
+                enemyFarm();
         }
     }
 
@@ -82,21 +88,30 @@ public class Map {
 
     public void checkCollision(Hero hero)
     {
-        for(Enemy enemy:enemies)
+        Enemy foundEnemy = null;
+        for(Enemy enemy: enemies)
         {
             if (enemy.getXPos() == hero.getXPos() && enemy.getYPos() == hero.getYPos())
             {
-                Battle fight = new Battle();
-                if (fight.runFight(hero, enemy) == 1)
-                {
-                    enemies.remove(enemy);
-                    break;
-                }
-                else
-                {
+                foundEnemy = enemy;
+            }
+        }
+        if (foundEnemy != null) {
+            Battle fight = new Battle();
+            int fightCheck = fight.fightCheck(hero, foundEnemy);
+            while (fightCheck == 0)
+            {
+                fightCheck = fight.fightCheck(hero, foundEnemy);
+            }
 
+            if (fightCheck == 1)
+            {
+                int fightResult = fight.fight(hero, foundEnemy);
+                if (fightResult == 1) {
+                    enemies.remove(foundEnemy);
                 }
             }
         }
+
     }
 }
