@@ -9,10 +9,9 @@ import java.util.Random;
 
 public class Map {
 
-    public int  level = 1;
-    public int  mapX = (level-1)*5+10-(level%2);
-    public int  mapY = mapX;
     List<Enemy> enemies  = new ArrayList<>();
+    public int  mapX = 0;
+    public int  mapY = 0;
 
     private static int enemyCount = 0;
     private Hero hero;
@@ -65,7 +64,7 @@ public class Map {
     public void enemyFarm()
     {
         Random rand = new Random();
-        while (enemyCount < level * 3)
+        while (enemyCount < hero.getLvl() * 3)
         {
             Enemy enemy = new Enemy();
 
@@ -108,23 +107,39 @@ public class Map {
             {
                 fightCheck = fight.fightCheck(hero, foundEnemy);
             }
-
             if (fightCheck == 1)
             {
                 int fightResult = fight.fight(hero, foundEnemy);
-                if (fightResult == 1) {
+                if (fightResult == 0) {
+
+                    //if you win the fight
                     enemies.remove(foundEnemy);
+                }
+                else if (fightResult == 1)
+                {
+                    //if you win the fight and level up
+                    enemies.remove(foundEnemy);
+                    newLevel(hero);
+                }
+            }
+            else if (fightCheck == -1)
+            {
+                if (fight.run() == -1)
+                {
+                    if (fight.fight(hero, foundEnemy) == 1)
+                        enemies.remove(foundEnemy);
                 }
             }
         }
 
     }
 
-//    public void newLevel(Hero hero)
-//    {
-//        this.level++;
-//
-//        hero.setXPos();
-//        hero.setYPos();
-//    }
+    public void newLevel(Hero hero)
+    {
+        mapX = (hero.getLvl()-1)*5+10-(hero.getLvl()%2);
+        mapY = mapX;
+        setHeroPos();
+        enemyCount = 0;
+        enemyFarm();
+    }
 }

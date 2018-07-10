@@ -47,8 +47,7 @@ public class Game {
                 name = scan.nextLine();
                 Hero myHero = new Hero(name);
                 Map map = new Map(myHero);
-                map.setHeroPos();
-                map.enemyFarm();
+                map.newLevel(myHero);
                 map.callEnemy();
                 utils.sleep(1000);
                 System.out.println("So you're " + myHero.getName() + ", I wonder...will you be the one to save our world?");
@@ -110,6 +109,8 @@ public class Game {
                 System.out.println("XP: " + myHero.getXp() + "/" + myHero.neededXP);
                 System.out.println("Attack: " + myHero.getAttack());
                 System.out.println("Defense: " + myHero.getDefense());
+                System.out.println("mapX: " + map.mapX);
+                System.out.println("mapY: " + map.mapY);
                 break;
             case "exit":
                 return - 1;

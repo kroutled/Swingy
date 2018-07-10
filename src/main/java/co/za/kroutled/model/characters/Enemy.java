@@ -10,7 +10,7 @@ public class Enemy extends Character {
     {
         Random rand = new Random();
         String enemyType = names[rand.nextInt(5)];
-        int enemyAttack = rand.nextInt(19) + 5;
+        int enemyAttack = rand.nextInt(9) + 5;
         int enemyDefense = rand.nextInt(5) + 0;
         int enemyHP = rand.nextInt(50) + 23;
         this.name = enemyType;

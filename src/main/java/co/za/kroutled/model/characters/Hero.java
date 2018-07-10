@@ -8,12 +8,13 @@ public class Hero extends Character {
     private int  xp = 0;
     public int neededXP;
 
-    private Armor armor = new Armor();
-    private Weapon weapon = new Weapon();
+    private Helm helm;
+    private Armor armor;
+    private Weapon weapon;
 
     public Hero(String name)
     {
-        super (name, 4, 3, 100, 100);
+        super (name, 100, 3, 100, 100);
         this.lvl = 1;
         this.xp = 0;
         this.neededXP = (int) (this.lvl * 1000 + (Math.pow(this.lvl - 1 , 2) * 450));
@@ -55,5 +56,29 @@ public class Hero extends Character {
         this.lvl += lvl;
         //include growth stats
 
+    }
+
+    public void setHelm(Helm helm)
+    {
+        if (this.helm != null)
+            this.hitPoints -= this.weapon.getBoost();
+        this.helm = helm;
+        this.hitPoints += helm.getBoost();
+    }
+
+    public void setArmor(Armor armor)
+    {
+        if (this.armor != null)
+            this.defense -= this.weapon.getBoost();
+        this.armor = armor;
+        this.defense += armor.getBoost();
+    }
+
+    public void setWeapon(Weapon weapon)
+    {
+        if (this.weapon != null)
+            this.attack -= this.weapon.getBoost();
+        this.weapon = weapon;
+        this.attack += weapon.getBoost();
     }
 }
