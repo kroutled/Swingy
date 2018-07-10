@@ -113,9 +113,7 @@ public class Battle {
              {
                  equipArtefact(hero, foundArtefact);
              }
-
          }
-
      }
 
      public boolean artefactCheck()
@@ -144,43 +142,4 @@ public class Battle {
                  break;
          }
      }
-//         String equip;
-//         Scanner scan = new Scanner(System.in);
-//         Random rand = new Random();
-//         Helm helm = new Helm();
-//         Armor armor = new Armor();
-//         Weapon weapon = new Weapon();
-//
-//         int dropChance = rand.nextInt(10);
-//
-//         if (dropChance >= 3) {
-//             System.out.println("Wow 11the enemy dropped something!");
-//             if (chance == 1) {
-//                 //helm
-//                 System.out.println("");
-//                 System.out.println("It appears to be a helm, would you like to equip this helm?");
-//                 equip = scan.nextLine();
-//                 if (equip.equalsIgnoreCase("Yes")) {
-//                     hero.setHelm(helm);
-//                 }
-//             }
-//             if (chance == 2) {
-//                 //armor
-//                 System.out.println("It appears to be armor, would you like to equip this armor?");
-//                 equip = scan.nextLine();
-//                 if (equip.equalsIgnoreCase("Yes")) {
-//                     hero.setArmor(armor);
-//                 }
-//             }
-//             if (chance == 3) {
-//                 //weapon
-//                 System.out.println("It appears to be a weapon, would you like to equip this weapon?");
-//                 equip = scan.nextLine();
-//                 if (equip.equalsIgnoreCase("Yes")) {
-//                     hero.setWeapon(weapon);
-//                 }
-//             }
-//         }
-//     }
-
 }

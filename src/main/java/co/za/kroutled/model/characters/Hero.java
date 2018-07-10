@@ -14,10 +14,10 @@ public class Hero extends Character {
 
     public Hero(String name)
     {
-        super (name, 100, 3, 100, 100);
+        super (name, 15, 6, 100, 100);
         this.lvl = 1;
         this.xp = 0;
-        this.neededXP = (int) (this.lvl * 1000 + (Math.pow(this.lvl - 1 , 2) * 450));
+        this.neededXP = Math.abs((int) (this.lvl * 1000 + (Math.pow(this.lvl - 1 , 2) * 450)));
     }
 
     public Hero(String name, int attack, int defense, int hitPoints, int maxHp, int lvl, int xp)
@@ -25,7 +25,7 @@ public class Hero extends Character {
         super(name,attack, defense, hitPoints, maxHp);
         this.lvl = lvl;
         this.lvl = xp;
-        this.neededXP = (int) (this.lvl * 1000 + (Math.pow(this.lvl - 1 , 2) * 450));
+        this.neededXP = Math.abs((int) (this.lvl * 1000 + (Math.pow(this.lvl - 1 , 2) * 450)));
     }
 
     public int getLvl()
@@ -46,6 +46,7 @@ public class Hero extends Character {
         {
             lvlUp(1);
             this.xp -= this.neededXP;
+            this.neededXP = Math.abs((int) (this.lvl * 1000 + (Math.pow(this.lvl - 1 , 2) * 450)));
             return 1;
         }
         return 0;

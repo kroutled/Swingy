@@ -37,8 +37,6 @@ public class Game {
 
         Scanner     scan = new Scanner(System.in);
         Utilities   utils = new Utilities();
-        Enemy       myEnemy = new Enemy();
-
 
         if (args.equalsIgnoreCase("Cli")) {
                 System.out.println("Welcome to the world!");
@@ -48,15 +46,15 @@ public class Game {
                 Hero myHero = new Hero(name);
                 Map map = new Map(myHero);
                 map.newLevel(myHero);
-                map.callEnemy();
-                utils.sleep(1000);
+                utils.sleep(600);
                 System.out.println("So you're " + myHero.getName() + ", I wonder...will you be the one to save our world?");
 
                 while (move(map, scan) != -1)
                 {
+                    System.out.printf("Position x:%d, y:%d\n", myHero.getXPos(), myHero.getYPos());
                     map.checkCollision(myHero);
-                    map.callEnemy();
-                    System.out.printf("hx:%d, y:%d\n", myHero.getXPos(), myHero.getYPos());
+                    //map.callEnemy();
+
                     if (myHero.getHp() == 0)
                     {
                         System.out.println("You've Died :(");
@@ -81,11 +79,13 @@ public class Game {
     {
         Hero myHero = map.getHero();
         System.out.println("You can go: ");
-        System.out.println("NORTH: 'w'");
-        System.out.println("SOUTH: 's'");
-        System.out.println("EAST: 'd'");
-        System.out.println("WEST: 'a'");
-        System.out.println("EXIT: exit");
+        System.out.println("NORTH - 'w'");
+        System.out.println("SOUTH - 's'");
+        System.out.println("EAST - 'd'");
+        System.out.println("WEST - 'a'");
+        System.out.println("STATS - 'stat'");
+        System.out.println("HINT - 'hint'");
+        System.out.println("EXIT - exit");
 
         String input = scan.nextLine();
         switch (input)
@@ -103,14 +103,18 @@ public class Game {
                 map.moveRight();
                 break;
             case "stat":
+                System.out.println("-----STATS-----");
                 System.out.println("Name: " + myHero.getName());
                 System.out.println("Health: " + myHero.getHp() + "/" + myHero.getMaxHp());
                 System.out.println("Level: " + myHero.getLvl());
                 System.out.println("XP: " + myHero.getXp() + "/" + myHero.neededXP);
                 System.out.println("Attack: " + myHero.getAttack());
                 System.out.println("Defense: " + myHero.getDefense());
-                System.out.println("mapX: " + map.mapX);
-                System.out.println("mapY: " + map.mapY);
+                System.out.println("Artefact: ");
+                System.out.println("---------------");
+                break;
+            case "hint":
+                map.hint();
                 break;
             case "exit":
                 return - 1;

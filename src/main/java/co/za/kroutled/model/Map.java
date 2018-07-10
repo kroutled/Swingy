@@ -64,14 +64,13 @@ public class Map {
     public void enemyFarm()
     {
         Random rand = new Random();
-        while (enemyCount < hero.getLvl() * 3)
+        while (enemyCount < (hero.getLvl() * 3) + 1)
         {
             Enemy enemy = new Enemy();
 
             enemy.setXPos(rand.nextInt(mapX));
             enemy.setYPos(rand.nextInt(mapY));
             if (enemy.getXPos() != hero.getXPos() && enemy.getYPos() != hero.getYPos()) {
-                System.out.println("Enemy spawned");
                 enemies.add(enemy);
                 enemyCount ++;
             }
@@ -141,5 +140,16 @@ public class Map {
         setHeroPos();
         enemyCount = 0;
         enemyFarm();
+    }
+
+    public void hint()
+    {
+        for (Enemy enemy : enemies)
+        {
+            System.out.printf("Enemy %s\n", enemy.getName());
+            System.out.printf("Position x:%d y:%d\n", enemy.getXPos(), enemy.getYPos());
+            break;
+        }
+        System.out.printf("\n");
     }
 }
