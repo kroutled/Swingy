@@ -3,10 +3,14 @@ package co.za.kroutled.controller;
 import co.za.kroutled.model.Map;
 import co.za.kroutled.model.characters.*;
 import co.za.kroutled.view.Window;
+import co.za.kroutled.Utilities.*;
+
+import java.util.List;
 import java.util.Scanner;
-import java.io.*;
 
 public class Game {
+
+    Print       utils = new Print();
 
     public static void main(String args[]) throws Exception
     {
@@ -32,28 +36,31 @@ public class Game {
 
     public Game(String args, String filename)
     {
+        Reader reader = new Reader();
         String  name;
-        int     run = 1;
+        int     type;
 
         Scanner     scan = new Scanner(System.in);
-        Utilities   utils = new Utilities();
+        Hero myHero = new Hero();
 
         if (args.equalsIgnoreCase("Cli")) {
                 System.out.println("Welcome to the world!");
                 utils.sleep(1000);
                 System.out.println("Please enter your name hero...");
                 name = scan.nextLine();
-                Hero myHero = new Hero(name);
+                utils.printClasses();
+                type = scan.nextInt();
+                scan = new Scanner(System.in);
+                myHero = classSelect(type, name);
                 Map map = new Map(myHero);
                 map.newLevel(myHero);
                 utils.sleep(600);
-                System.out.println("So you're " + myHero.getName() + ", I wonder...will you be the one to save our world?");
+                System.out.println("So you're " + myHero.getName() + " the " + myHero.getType() +", I wonder...will you be the one to save our world?");
 
                 while (move(map, scan) != -1)
                 {
                     System.out.printf("Position x:%d, y:%d\n", myHero.getXPos(), myHero.getYPos());
                     map.checkCollision(myHero);
-                    //map.callEnemy();
 
                     if (myHero.getHp() == 0)
                     {
@@ -64,7 +71,6 @@ public class Game {
                     {
                         break;
                     }
-                        //map.newLevel();
                 }
         }
         else if (args.equalsIgnoreCase("Gui")) {
@@ -78,14 +84,7 @@ public class Game {
     public int move( Map map , Scanner scan)
     {
         Hero myHero = map.getHero();
-        System.out.println("You can go: ");
-        System.out.println("NORTH - 'w'");
-        System.out.println("SOUTH - 's'");
-        System.out.println("EAST - 'd'");
-        System.out.println("WEST - 'a'");
-        System.out.println("STATS - 'stat'");
-        System.out.println("HINT - 'hint'");
-        System.out.println("EXIT - exit");
+        utils.printDirections();
 
         String input = scan.nextLine();
         switch (input)
@@ -103,15 +102,7 @@ public class Game {
                 map.moveRight();
                 break;
             case "stat":
-                System.out.println("-----STATS-----");
-                System.out.println("Name: " + myHero.getName());
-                System.out.println("Health: " + myHero.getHp() + "/" + myHero.getMaxHp());
-                System.out.println("Level: " + myHero.getLvl());
-                System.out.println("XP: " + myHero.getXp() + "/" + myHero.neededXP);
-                System.out.println("Attack: " + myHero.getAttack());
-                System.out.println("Defense: " + myHero.getDefense());
-                System.out.println("Artefact: ");
-                System.out.println("---------------");
+                utils.printStats(myHero);
                 break;
             case "hint":
                 map.hint();
@@ -122,5 +113,18 @@ public class Game {
                 System.out.println("Invalid input");
         }
         return 0;
+    }
+
+    public Hero classSelect(int type, String name)
+    {
+        switch (type) {
+            case 1 :
+                return new Druid(name);
+            case 2:
+                return new Mage(name);
+            case 3:
+                return new Warrior(name);
+        }
+        return new Hero(name);
     }
 }

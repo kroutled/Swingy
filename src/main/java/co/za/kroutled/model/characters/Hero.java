@@ -6,11 +6,14 @@ public class Hero extends Character {
 
     private int  lvl;
     private int  xp = 0;
+    protected String type;
     public int neededXP;
 
     private Helm helm;
     private Armor armor;
     private Weapon weapon;
+
+    public Hero () {}
 
     public Hero(String name)
     {
@@ -36,6 +39,11 @@ public class Hero extends Character {
     public int getXp()
     {
         return this.xp;
+    }
+
+    public String getType()
+    {
+        return this.type;
     }
 
     public int setXp(int val)

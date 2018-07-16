@@ -1,5 +1,6 @@
 package co.za.kroutled.controller;
 
+import co.za.kroutled.Utilities.Print;
 import co.za.kroutled.model.artefacts.*;
 import co.za.kroutled.model.characters.Enemy;
 import co.za.kroutled.model.characters.Hero;
@@ -31,7 +32,7 @@ public class Battle {
 
      public int fight (Hero hero, Enemy enemy)
      {
-         Utilities   utils = new Utilities();
+         Print  utils = new Print();
          Random rand = new Random();
 
          String      moves[] = {"knock", "slam", "wallop", "attack", "poes klap"};
@@ -40,6 +41,8 @@ public class Battle {
              //run = enemy attacks first vs fight = you attack first
              int heroDmg = hero.getAttack() - enemy.getDefense();
              int enemyDmg = enemy.getAttack() - hero.getDefense();
+             if (enemyDmg < 0)
+                 enemyDmg = 0;
              System.out.println("You " + moves[rand.nextInt(5)] + " the enemy " + enemy.getName() + " and deal " + heroDmg);
              enemy.takeDmg(heroDmg);
              utils.sleep(1000);

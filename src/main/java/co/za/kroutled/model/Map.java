@@ -1,11 +1,13 @@
 package co.za.kroutled.model;
 
+import co.za.kroutled.Utilities.Writer;
 import co.za.kroutled.controller.Battle;
 import co.za.kroutled.model.characters.*;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Map {
 
@@ -130,7 +132,7 @@ public class Map {
                 }
             }
         }
-
+        checkWin(hero);
     }
 
     public void newLevel(Hero hero)
@@ -151,5 +153,27 @@ public class Map {
             break;
         }
         System.out.printf("\n");
+    }
+
+    public void checkWin(Hero hero)
+    {
+        Writer write = new Writer();
+        Scanner scan = new Scanner(System.in);
+
+        if (inMap() == false)
+        {
+            System.out.println("Congratulations!!! You have won level " + hero.getLvl());
+            System.out.println("would you like to save your progress? y/n");
+            String save = scan.nextLine();
+            if (save.equalsIgnoreCase("Y"))
+            {
+                write.saveHero(hero);
+                System.out.println("Saved!");
+            }
+            else if (save.equalsIgnoreCase("N"))
+            {
+                System.out.println("You suck!");
+            }
+        }
     }
 }

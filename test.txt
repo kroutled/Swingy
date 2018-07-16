@@ -1,0 +1,4 @@
+heyoo,Druid,18,14,120,0,1
+kyle,Warrior,20,16,100,0,1
+Tpang,Mage,27,8,98,715,1
+bitch,Warrior,20,16,100,0,1
