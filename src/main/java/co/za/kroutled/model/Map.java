@@ -14,6 +14,7 @@ public class Map {
     List<Enemy> enemies  = new ArrayList<>();
     public int  mapX = 0;
     public int  mapY = 0;
+    private boolean youWin = false;
 
     private static int enemyCount = 0;
     private Hero hero;
@@ -91,48 +92,37 @@ public class Map {
         }
     }
 
-    public void checkCollision(Hero hero)
-    {
+    public void checkCollision(Hero hero) {
         Enemy foundEnemy = null;
-        for(Enemy enemy: enemies)
-        {
-            if (enemy.getXPos() == hero.getXPos() && enemy.getYPos() == hero.getYPos())
-            {
+        for (Enemy enemy : enemies) {
+            if (enemy.getXPos() == hero.getXPos() && enemy.getYPos() == hero.getYPos()) {
                 foundEnemy = enemy;
             }
         }
         if (foundEnemy != null) {
             Battle fight = new Battle();
             int fightCheck = fight.fightCheck(hero, foundEnemy);
-            while (fightCheck == 0)
-            {
+            while (fightCheck == 0) {
                 fightCheck = fight.fightCheck(hero, foundEnemy);
             }
-            if (fightCheck == 1)
-            {
+            if (fightCheck == 1) {
                 int fightResult = fight.fight(hero, foundEnemy);
                 if (fightResult == 0) {
 
                     //if you win the fight
                     enemies.remove(foundEnemy);
-                }
-                else if (fightResult == 1)
-                {
+                } else if (fightResult == 1) {
                     //if you win the fight and level up
                     enemies.remove(foundEnemy);
                     newLevel(hero);
                 }
-            }
-            else if (fightCheck == -1)
-            {
-                if (fight.run() == -1)
-                {
+            } else if (fightCheck == -1) {
+                if (fight.run() == -1) {
                     if (fight.fight(hero, foundEnemy) == 1)
                         enemies.remove(foundEnemy);
                 }
             }
         }
-        checkWin(hero);
     }
 
     public void newLevel(Hero hero)
@@ -155,25 +145,33 @@ public class Map {
         System.out.printf("\n");
     }
 
-    public void checkWin(Hero hero)
+    Scanner scan = new Scanner(System.in);
+    public int checkWin(Hero hero)
     {
         Writer write = new Writer();
-        Scanner scan = new Scanner(System.in);
+
 
         if (inMap() == false)
         {
             System.out.println("Congratulations!!! You have won level " + hero.getLvl());
             System.out.println("would you like to save your progress? y/n");
             String save = scan.nextLine();
+            scan = new Scanner(System.in);
             if (save.equalsIgnoreCase("Y"))
             {
                 write.saveHero(hero);
                 System.out.println("Saved!");
+                this.youWin = true;
+                return 1;
             }
             else if (save.equalsIgnoreCase("N"))
             {
-                System.out.println("You suck!");
+                System.out.println("Bye bye!");
+                return 2;
             }
+            else
+                return 0;
         }
+        return 1;
     }
 }

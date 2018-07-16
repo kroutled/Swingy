@@ -67,6 +67,8 @@ public class Game {
                         System.out.println("You've Died :(");
                         break;
                     }
+                    while (map.checkWin(myHero) == 0)
+                        map.checkWin(myHero);
                     if (map.inMap() == false)
                     {
                         break;

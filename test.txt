@@ -2,3 +2,12 @@ heyoo,Druid,18,14,120,0,1
 kyle,Warrior,20,16,100,0,1
 Tpang,Mage,27,8,98,715,1
 bitch,Warrior,20,16,100,0,1
+ka,Mage,27,8,100,0,1
+lol,Druid,18,14,120,0,1
+test,Mage,27,8,100,0,1
+pwd,Druid,18,14,120,0,1
+asd,Druid,18,14,120,0,1
+lol,Warrior,20,16,100,0,1
+ka,Druid,18,14,120,0,1
+ka,Warrior,20,16,100,0,1
+genius,Druid,18,14,120,0,1
