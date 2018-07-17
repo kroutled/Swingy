@@ -17,4 +17,15 @@ public class Druid extends Hero{
         this.maxHp += 20;
 
     }
+
+    public Druid(String name, int att, int def, int hp, int xp, int lvl)
+    {
+        this.setName(name);
+        this.type = "Druid";
+        this.setAttack(att);
+        this.setDefense(def);
+        this.setHp(hp);
+        this.setlvl(lvl);
+        this.setXp(xp);
+    }
 }

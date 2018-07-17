@@ -1,6 +1,6 @@
 /goinfre/kroutled/Desktop/Swingy/src/main/java/co/za/kroutled/model/characters/Druid.java
 /goinfre/kroutled/Desktop/Swingy/src/main/java/co/za/kroutled/model/characters/Warrior.java
-/goinfre/kroutled/Desktop/Swingy/src/main/java/co/za/kroutled/Utilities/Reader.java
+/goinfre/kroutled/Desktop/Swingy/src/main/java/co/za/kroutled/controller/Loadgame.java
 /goinfre/kroutled/Desktop/Swingy/src/main/java/co/za/kroutled/model/characters/Character.java
 /goinfre/kroutled/Desktop/Swingy/src/main/java/co/za/kroutled/view/Window.java
 /goinfre/kroutled/Desktop/Swingy/src/main/java/co/za/kroutled/controller/Game.java

@@ -22,4 +22,10 @@ public class Armor extends Artefact{
         this.level = level;
         this.type = "armor";
     }
+
+    public Armor (String name, int boost)
+    {
+        this.name = name;
+        this.boost = boost;
+    }
 }

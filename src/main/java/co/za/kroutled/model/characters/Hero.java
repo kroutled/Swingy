@@ -60,11 +60,9 @@ public class Hero extends Character {
         return 0;
     }
 
-    public void     lvlUp(int lvl)
+    public void setlvl(int lvl)
     {
-        this.lvl += lvl;
-        //include growth stats
-
+        this.lvl = lvl;
     }
 
     public void setHelm(Helm helm)
@@ -89,5 +87,27 @@ public class Hero extends Character {
             this.attack -= this.weapon.getBoost();
         this.weapon = weapon;
         this.attack += weapon.getBoost();
+    }
+
+    public Helm getHelm()
+    {
+        return this.helm;
+    }
+
+    public Armor getArmor()
+    {
+        return this.armor;
+    }
+
+    public Weapon getWeapon()
+    {
+        return this.weapon;
+    }
+
+    public void     lvlUp(int lvl)
+    {
+        this.lvl += lvl;
+        //include growth stats
+
     }
 }

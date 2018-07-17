@@ -14,4 +14,15 @@ public class Mage extends Hero{
         this.attack += 12;
         this.defense += 2;
     }
+
+    public Mage(String name, int att, int def, int hp, int xp, int lvl)
+    {
+        this.setName(name);
+        this.type = "Mage";
+        this.setAttack(att);
+        this.setDefense(def);
+        this.setHp(hp);
+        this.setlvl(lvl);
+        this.setXp(xp);
+    }
 }

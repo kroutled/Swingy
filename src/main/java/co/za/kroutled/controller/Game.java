@@ -5,12 +5,15 @@ import co.za.kroutled.model.characters.*;
 import co.za.kroutled.view.Window;
 import co.za.kroutled.Utilities.*;
 
+import java.lang.reflect.Array;
 import java.util.List;
 import java.util.Scanner;
 
 public class Game {
 
     Print       utils = new Print();
+    Scanner     scan = new Scanner(System.in);
+    Map         map;
 
     public static void main(String args[]) throws Exception
     {
@@ -36,27 +39,50 @@ public class Game {
 
     public Game(String args, String filename)
     {
-        Reader reader = new Reader();
         String  name;
         int     type;
 
-        Scanner     scan = new Scanner(System.in);
         Hero myHero = new Hero();
+        Loadgame load = new Loadgame();
 
-        if (args.equalsIgnoreCase("Cli")) {
+        if (args.equalsIgnoreCase("Cli"))
+        {
                 System.out.println("Welcome to the world!");
-                utils.sleep(1000);
-                System.out.println("Please enter your name hero...");
-                name = scan.nextLine();
-                utils.printClasses();
-                type = scan.nextInt();
+                System.out.println("Would you like to:");
+                System.out.println("1.Create a character");
+                System.out.println("2.Select a previous character");
+                int charSel = scan.nextInt();
                 scan = new Scanner(System.in);
-                myHero = classSelect(type, name);
-                Map map = new Map(myHero);
-                map.newLevel(myHero);
-                utils.sleep(600);
-                System.out.println("So you're " + myHero.getName() + " the " + myHero.getType() +", I wonder...will you be the one to save our world?");
-
+                if (charSel == 1)
+                {
+                    System.out.println("Please enter your name hero...");
+                    name = scan.nextLine();
+                    utils.printClasses();
+                    type = scan.nextInt();
+                    scan = new Scanner(System.in);
+                    myHero = classSelect(type, name);
+                    map = new Map(myHero);
+                    map.newLevel(myHero);
+                    utils.sleep(600);
+                    System.out.println("So you're " + myHero.getName() + " the " + myHero.getType() +", I wonder...will you be the one to save our world?");
+                }
+                else if (charSel == 2)
+                {
+                    List<Hero> heros;
+                    heros = load.createHeros();
+                    System.out.println("Please select a hero:");
+                    int i = 1;
+                    for (Hero hero : heros)
+                    {
+                        System.out.println(i + ". " + hero.getName());
+                        i++;
+                    }
+                    int chosen = scan.nextInt();
+                    myHero = heros.get(chosen - 1);
+                    map = new Map(myHero);
+                }
+                scan = new Scanner(System.in);
+                utils.sleep(1000);
                 while (move(map, scan) != -1)
                 {
                     System.out.printf("Position x:%d, y:%d\n", myHero.getXPos(), myHero.getYPos());

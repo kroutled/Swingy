@@ -47,11 +47,6 @@ public class Character {
         return this.name;
     }
 
-    public void     setHp(int val)
-    {
-        this.hitPoints = val;
-    }
-
     public void     takeDmg(int val)
     {
         this.hitPoints -= val;
@@ -78,4 +73,25 @@ public class Character {
     {
         this.YPos = val;
     }
+
+    public void setName(String name)
+    {
+        this.name = name;
+    }
+
+    public void setAttack(int att)
+    {
+        this.attack = att;
+    }
+
+    public void setDefense(int def)
+    {
+        this.defense = def;
+    }
+
+    public void setHp(int hp)
+    {
+        this.hitPoints = hp;
+    }
+
 }

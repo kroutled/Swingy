@@ -15,4 +15,15 @@ public class Warrior extends Hero {
         this.defense += 10;
 
     }
+
+    public Warrior(String name, int att, int def, int hp, int xp, int lvl)
+    {
+        this.setName(name);
+        this.type = "Warrior";
+        this.setAttack(att);
+        this.setDefense(def);
+        this.setHp(hp);
+        this.setlvl(lvl);
+        this.setXp(xp);
+    }
 }

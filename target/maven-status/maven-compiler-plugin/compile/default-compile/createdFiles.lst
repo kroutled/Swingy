@@ -5,7 +5,7 @@ co/za/kroutled/model/characters/Hero.class
 co/za/kroutled/Utilities/Print.class
 co/za/kroutled/model/artefacts/Armor.class
 co/za/kroutled/model/characters/Enemy.class
-co/za/kroutled/Utilities/Reader.class
+co/za/kroutled/controller/Loadgame.class
 co/za/kroutled/controller/Game.class
 co/za/kroutled/model/characters/Character.class
 co/za/kroutled/model/characters/Warrior.class

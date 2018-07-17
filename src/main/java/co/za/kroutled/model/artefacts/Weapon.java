@@ -22,4 +22,10 @@ public class Weapon extends Artefact{
         this.boost = rand.nextInt(10 * level);
         this.type = "weapon";
     }
+
+    public Weapon (String name, int boost)
+    {
+        this.name = name;
+        this.boost = boost;
+    }
 }
