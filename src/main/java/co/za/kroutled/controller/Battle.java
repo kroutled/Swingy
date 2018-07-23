@@ -12,6 +12,8 @@ public class Battle {
 
     public Battle () {}
 
+    public static String guiFight;
+    
     public int fightCheck(Hero hero, Enemy enemy)
     {
         Scanner scan = new Scanner(System.in);
@@ -32,6 +34,7 @@ public class Battle {
 
      public int fight (Hero hero, Enemy enemy)
      {
+         guiFight = "";
          Print  utils = new Print();
          Random rand = new Random();
 
@@ -44,14 +47,17 @@ public class Battle {
              if (enemyDmg < 0)
                  enemyDmg = 0;
              System.out.println("You " + moves[rand.nextInt(5)] + " the enemy " + enemy.getName() + " and deal " + heroDmg);
+             guiFight += "You " + moves[rand.nextInt(5)] + " the enemy " + enemy.getName() + " and deal " + heroDmg + "\n";
              enemy.takeDmg(heroDmg);
              utils.sleep(1000);
              if (enemy.getHp() == 0)
                  break;
              System.out.println("The enemy " + enemy.getName() + " " + moves[rand.nextInt(5)] + "s you! You have taken " + enemyDmg);
+             guiFight += "The enemy " + enemy.getName() + " " + moves[rand.nextInt(5)] + "s you! You have taken " + enemyDmg + "\n";
              hero.takeDmg(enemyDmg);
              utils.sleep(1000);
              System.out.println(hero.getName() + ":" + hero.getHp() + " VS " + enemy.getName() + ":" + enemy.getHp());
+             guiFight += hero.getName() + ":" + hero.getHp() + " VS " + enemy.getName() + ":" + enemy.getHp() + "\n";
          }
 
          if (enemy.getHp() == 0)
@@ -62,13 +68,16 @@ public class Battle {
              dropArtefact(hero);
              if (lvledUp == 1)
              {
-                 System.out.println("You defeated the enemy and gained " + xpGained + "!");
+                 System.out.println("You defeated the enemy and gained " + xpGained + "expirience!");
                  System.out.println("Congratulations!!!! You have leveled up to level " + hero.getLvl());
+                 guiFight += "You defeated the enemy and gained " + xpGained + "expirience!" + "\n" + 
+                         "Congratulations!!!! You have leveled up to level " + hero.getLvl();
                  return 1;
              }
              else
              {
-                 System.out.println("You defeated the enemy and gained " + xpGained + "!");
+                 System.out.println("You defeated the enemy and gained " + xpGained + "expirience!");
+                 guiFight += "You defeated the enemy and gained " + xpGained + "expirience!";
                  return 0;
              }
          }

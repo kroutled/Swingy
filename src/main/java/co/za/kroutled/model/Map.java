@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 public class Map {
 
-    List<Enemy> enemies  = new ArrayList<>();
+    public List<Enemy> enemies  = new ArrayList<>();
     public int  mapX = 0;
     public int  mapY = 0;
     private boolean youWin = false;

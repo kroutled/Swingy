@@ -3,6 +3,7 @@ package co.za.kroutled.controller;
 import co.za.kroutled.model.Map;
 import co.za.kroutled.model.characters.*;
 import co.za.kroutled.view.Window;
+
 import co.za.kroutled.Utilities.*;
 
 import java.lang.reflect.Array;
@@ -44,7 +45,7 @@ public class Game {
 
         Hero myHero = new Hero();
         Loadgame load = new Loadgame();
-
+        
         if (args.equalsIgnoreCase("Cli"))
         {
                 System.out.println("Welcome to the world!");

@@ -15,7 +15,7 @@ public class Writer {
         PrintWriter out = null;
         try {
 
-            fw = new FileWriter("/goinfre/kroutled/Desktop/Swingy/test.txt", true);
+            fw = new FileWriter("/home/kyle/dev/java/Swingy/test.txt", true);
             bw = new BufferedWriter(fw);
             out = new PrintWriter(bw);
             out.println(hero.getName() + "," + hero.getType() + "," + hero.getAttack() + "," + hero.getDefense() + "," + hero.getHp() + "," + hero.getXp() + "," + hero.getLvl() + ","
