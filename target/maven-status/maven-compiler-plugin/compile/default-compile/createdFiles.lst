@@ -10,6 +10,7 @@ co/za/kroutled/controller/Game.class
 co/za/kroutled/model/characters/Character.class
 co/za/kroutled/view/Window.class
 co/za/kroutled/Utilities/Writer.class
+co/za/kroutled/view/Window$14.class
 co/za/kroutled/view/Window$5.class
 co/za/kroutled/model/characters/Mage.class
 co/za/kroutled/view/Window$8.class
@@ -21,6 +22,7 @@ co/za/kroutled/Utilities/Print.class
 co/za/kroutled/view/Window$2.class
 co/za/kroutled/view/Window$10.class
 co/za/kroutled/view/Window$6.class
+co/za/kroutled/view/Window$15.class
 co/za/kroutled/model/characters/Warrior.class
 co/za/kroutled/view/Window$7.class
 co/za/kroutled/model/artefacts/Weapon.class

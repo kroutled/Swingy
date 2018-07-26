@@ -13,6 +13,8 @@ public class Battle {
     public Battle () {}
 
     public static String guiFight;
+    public static String guiArtefact;
+    public static boolean droppedArtefact;
     
     public int fightCheck(Hero hero, Enemy enemy)
     {
@@ -37,6 +39,7 @@ public class Battle {
          guiFight = "";
          Print  utils = new Print();
          Random rand = new Random();
+         Game game = new Game();
 
          String      moves[] = {"knock", "slam", "wallop", "attack", "poes klap"};
          while (hero.getHp() > 0 && enemy.getHp() > 0)
@@ -49,13 +52,15 @@ public class Battle {
              System.out.println("You " + moves[rand.nextInt(5)] + " the enemy " + enemy.getName() + " and deal " + heroDmg);
              guiFight += "You " + moves[rand.nextInt(5)] + " the enemy " + enemy.getName() + " and deal " + heroDmg + "\n";
              enemy.takeDmg(heroDmg);
-             utils.sleep(1000);
+             if (game.guiOrCli == 1)
+                utils.sleep(1000);
              if (enemy.getHp() == 0)
                  break;
              System.out.println("The enemy " + enemy.getName() + " " + moves[rand.nextInt(5)] + "s you! You have taken " + enemyDmg);
              guiFight += "The enemy " + enemy.getName() + " " + moves[rand.nextInt(5)] + "s you! You have taken " + enemyDmg + "\n";
              hero.takeDmg(enemyDmg);
-             utils.sleep(1000);
+             if (game.guiOrCli == 1)
+                utils.sleep(1000);
              System.out.println(hero.getName() + ":" + hero.getHp() + " VS " + enemy.getName() + ":" + enemy.getHp());
              guiFight += hero.getName() + ":" + hero.getHp() + " VS " + enemy.getName() + ":" + enemy.getHp() + "\n";
          }
@@ -70,14 +75,14 @@ public class Battle {
              {
                  System.out.println("You defeated the enemy and gained " + xpGained + "expirience!");
                  System.out.println("Congratulations!!!! You have leveled up to level " + hero.getLvl());
-                 guiFight += "You defeated the enemy and gained " + xpGained + "expirience!" + "\n" + 
+                 guiFight += "You defeated the enemy and gained " + xpGained + " expirience!" + "\n" + 
                          "Congratulations!!!! You have leveled up to level " + hero.getLvl();
                  return 1;
              }
              else
              {
-                 System.out.println("You defeated the enemy and gained " + xpGained + "expirience!");
-                 guiFight += "You defeated the enemy and gained " + xpGained + "expirience!";
+                 System.out.println("You defeated the enemy and gained " + xpGained + " expirience!");
+                 guiFight += "You defeated the enemy and gained " + xpGained + " expirience!";
                  return 0;
              }
          }
@@ -101,12 +106,17 @@ public class Battle {
      public void dropArtefact (Hero hero)
      {
          Random rand = new Random();
+         Game game = new Game();
+         guiArtefact = "";
+         this.droppedArtefact = false;
          int    dropChance = rand.nextInt(10);
          if (dropChance > 1 && dropChance < 5)
          {
+             this.droppedArtefact = true;
              Artefact[] artefacts = {new Weapon(hero.getLvl()), new Armor(hero.getLvl()), new Helm(hero.getLvl())};
              Artefact foundArtefact = artefacts[dropChance - 2];
              System.out.println("It appears that a " + foundArtefact.getName() + " has dropepd!");
+             guiArtefact += "It appears that a " + foundArtefact.getName() + " has dropepd!";
              String boost = "";
              switch(foundArtefact.getType())
              {
@@ -121,9 +131,13 @@ public class Battle {
                      break;
              }
              System.out.println("It adds " + foundArtefact.getBoost() + " " + boost);
-             if (artefactCheck() == true)
+             guiArtefact += "It adds " + foundArtefact.getBoost() + " " + boost;
+             if (game.guiOrCli == 1)
              {
-                 equipArtefact(hero, foundArtefact);
+                if (artefactCheck() == true)
+                {
+                    equipArtefact(hero, foundArtefact);
+                }
              }
          }
      }

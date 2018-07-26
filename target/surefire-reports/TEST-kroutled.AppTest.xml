@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="kroutled.AppTest" time="0.021" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="kroutled.AppTest" time="0.026" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
     <property name="file.encoding.pkg" value="sun.io"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="ZA"/>
     <property name="sun.boot.library.path" value="/usr/local/jdk1.8.0_171/jre/lib/amd64"/>
-    <property name="sun.java.command" value="/home/kyle/dev/java/Swingy/target/surefire/surefirebooter5404335539652202063.jar /home/kyle/dev/java/Swingy/target/surefire 2018-07-21T09-42-53_908-jvmRun1 surefire7731022197569996130tmp surefire_07043651266402604287tmp"/>
+    <property name="sun.java.command" value="/home/kyle/dev/java/Swingy/target/surefire/surefirebooter6461251767159803483.jar /home/kyle/dev/java/Swingy/target/surefire 2018-07-26T21-34-00_926-jvmRun1 surefire5938891409519679520tmp surefire_01087110122589339036tmp"/>
     <property name="surefire.test.class.path" value="/home/kyle/dev/java/Swingy/target/test-classes:/home/kyle/dev/java/Swingy/target/classes:/home/kyle/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/kyle/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/home/kyle"/>
@@ -29,7 +29,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/home/kyle/dev/java/Swingy/target/surefire/surefirebooter5404335539652202063.jar"/>
+    <property name="surefire.real.class.path" value="/home/kyle/dev/java/Swingy/target/surefire/surefirebooter6461251767159803483.jar"/>
     <property name="sun.boot.class.path" value="/usr/local/jdk1.8.0_171/jre/lib/resources.jar:/usr/local/jdk1.8.0_171/jre/lib/rt.jar:/usr/local/jdk1.8.0_171/jre/lib/sunrsasign.jar:/usr/local/jdk1.8.0_171/jre/lib/jsse.jar:/usr/local/jdk1.8.0_171/jre/lib/jce.jar:/usr/local/jdk1.8.0_171/jre/lib/charsets.jar:/usr/local/jdk1.8.0_171/jre/lib/jfr.jar:/usr/local/jdk1.8.0_171/jre/classes"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="1.8.0_171-b11"/>
@@ -58,5 +58,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="shouldAnswerWithTrue" classname="kroutled.AppTest" time="0.002"/>
+  <testcase name="shouldAnswerWithTrue" classname="kroutled.AppTest" time="0.003"/>
 </testsuite>

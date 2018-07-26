@@ -20,9 +20,10 @@ import javax.swing.JLabel;
 public class Window extends javax.swing.JFrame {
 
     public Hero myHero;
+    private static Enemy foundEnemy = null;
     Map map;
     Loadgame load = new Loadgame();
-    Battle battle = new Battle();
+    Battle fight = new Battle();
     /**
      * Creates new form Window
      */
@@ -78,6 +79,16 @@ public class Window extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
+        fightRunPanel = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        fightButton = new javax.swing.JButton();
+        runButton = new javax.swing.JButton();
+        equipDiscard = new javax.swing.JPanel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        equipButton = new javax.swing.JButton();
+        discardButton = new javax.swing.JButton();
 
         jButton1.setText("jButton1");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -120,16 +131,20 @@ public class Window extends javax.swing.JFrame {
         StartPanelLayout.setHorizontalGroup(
             StartPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(StartPanelLayout.createSequentialGroup()
-                .addGap(276, 276, 276)
                 .addGroup(StartPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(StartPanelLayout.createSequentialGroup()
-                        .addGap(9, 9, 9)
+                        .addGap(285, 285, 285)
                         .addGroup(StartPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton2)
                             .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(294, Short.MAX_VALUE))
+                            .addGroup(StartPanelLayout.createSequentialGroup()
+                                .addGroup(StartPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jButton2)
+                                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(10, 10, 10))))
+                    .addGroup(StartPanelLayout.createSequentialGroup()
+                        .addGap(269, 269, 269)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(301, Short.MAX_VALUE))
         );
         StartPanelLayout.setVerticalGroup(
             StartPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -138,11 +153,11 @@ public class Window extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(57, 57, 57)
-                .addComponent(jButton2)
-                .addGap(30, 30, 30)
+                .addGap(35, 35, 35)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(jButton3)
-                .addContainerGap(203, Short.MAX_VALUE))
+                .addContainerGap(237, Short.MAX_VALUE))
         );
 
         MainPanel.add(StartPanel, "startPanel");
@@ -311,6 +326,7 @@ public class Window extends javax.swing.JFrame {
         });
 
         jScrollPane1.setViewportView(Map);
+        Map.getAccessibleContext().setAccessibleName("");
 
         jScrollPane2.setViewportView(Sim);
 
@@ -327,33 +343,35 @@ public class Window extends javax.swing.JFrame {
         GamePanelLayout.setHorizontalGroup(
             GamePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(GamePanelLayout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 256, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane3))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, GamePanelLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(GamePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(GamePanelLayout.createSequentialGroup()
-                        .addGap(72, 72, 72)
-                        .addComponent(jButton7))
                     .addGroup(GamePanelLayout.createSequentialGroup()
                         .addComponent(jButton8)
                         .addGap(74, 74, 74)
                         .addComponent(jButton9))
                     .addGroup(GamePanelLayout.createSequentialGroup()
                         .addGap(71, 71, 71)
-                        .addComponent(jButton10)))
+                        .addComponent(jButton10))
+                    .addGroup(GamePanelLayout.createSequentialGroup()
+                        .addGap(72, 72, 72)
+                        .addComponent(jButton7)))
                 .addGap(262, 262, 262))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, GamePanelLayout.createSequentialGroup()
-                .addGap(98, 98, 98)
-                .addComponent(jLabel10)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 210, Short.MAX_VALUE)
-                .addComponent(jLabel9)
-                .addGap(189, 189, 189)
+                .addGap(119, 119, 119)
                 .addComponent(jLabel8)
-                .addGap(102, 102, 102))
+                .addGap(203, 203, 203)
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel10)
+                .addGap(126, 126, 126))
         );
         GamePanelLayout.setVerticalGroup(
             GamePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -365,8 +383,8 @@ public class Window extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(GamePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 296, Short.MAX_VALUE)
-                    .addComponent(jScrollPane2)
-                    .addComponent(jScrollPane3))
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane2))
                 .addGap(18, 18, 18)
                 .addComponent(jButton7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -379,6 +397,103 @@ public class Window extends javax.swing.JFrame {
         );
 
         MainPanel.add(GamePanel, "gamePanel");
+
+        jLabel11.setText("An enemy has appeared and challenges you to battle");
+
+        jLabel12.setText("What will you do?");
+
+        fightButton.setText("Fight");
+        fightButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fightButtonActionPerformed(evt);
+            }
+        });
+
+        runButton.setText("Run");
+        runButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                runButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout fightRunPanelLayout = new javax.swing.GroupLayout(fightRunPanel);
+        fightRunPanel.setLayout(fightRunPanelLayout);
+        fightRunPanelLayout.setHorizontalGroup(
+            fightRunPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(fightRunPanelLayout.createSequentialGroup()
+                .addGroup(fightRunPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(fightRunPanelLayout.createSequentialGroup()
+                        .addGap(317, 317, 317)
+                        .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(fightRunPanelLayout.createSequentialGroup()
+                        .addGap(188, 188, 188)
+                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(fightRunPanelLayout.createSequentialGroup()
+                        .addGap(341, 341, 341)
+                        .addGroup(fightRunPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(fightButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(runButton, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(206, Short.MAX_VALUE))
+        );
+        fightRunPanelLayout.setVerticalGroup(
+            fightRunPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(fightRunPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel12)
+                .addGap(18, 18, 18)
+                .addComponent(fightButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(runButton)
+                .addContainerGap(298, Short.MAX_VALUE))
+        );
+
+        MainPanel.add(fightRunPanel, "fightRunPanel");
+
+        jLabel13.setText("It would appear that the enemy has dropped something!");
+
+        jLabel14.setText("Would you like to:");
+
+        equipButton.setText("Equip");
+
+        discardButton.setText("Discard");
+
+        javax.swing.GroupLayout equipDiscardLayout = new javax.swing.GroupLayout(equipDiscard);
+        equipDiscard.setLayout(equipDiscardLayout);
+        equipDiscardLayout.setHorizontalGroup(
+            equipDiscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, equipDiscardLayout.createSequentialGroup()
+                .addGap(0, 197, Short.MAX_VALUE)
+                .addComponent(jLabel13)
+                .addGap(135, 135, 135))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, equipDiscardLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(equipDiscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, equipDiscardLayout.createSequentialGroup()
+                        .addComponent(jLabel14)
+                        .addGap(286, 286, 286))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, equipDiscardLayout.createSequentialGroup()
+                        .addGroup(equipDiscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(discardButton)
+                            .addComponent(equipButton, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(298, 298, 298))))
+        );
+        equipDiscardLayout.setVerticalGroup(
+            equipDiscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(equipDiscardLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(jLabel13)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel14)
+                .addGap(18, 18, 18)
+                .addComponent(equipButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(discardButton)
+                .addContainerGap(283, Short.MAX_VALUE))
+        );
+
+        MainPanel.add(equipDiscard, "equipDiscard");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -430,6 +545,7 @@ public class Window extends javax.swing.JFrame {
             map.newLevel(myHero);
             CardLayout card = (CardLayout)MainPanel.getLayout();
             card.show(MainPanel, "gamePanel");
+            Sim.setEditable(false);
             heroStats();
         }
     }//GEN-LAST:event_jButton4ActionPerformed
@@ -448,6 +564,7 @@ public class Window extends javax.swing.JFrame {
             map.newLevel(myHero);
             CardLayout card = (CardLayout)MainPanel.getLayout();
             card.show(MainPanel, "gamePanel");
+            Sim.setEditable(false);
             heroStats();
         }
     }//GEN-LAST:event_jButton5ActionPerformed
@@ -463,6 +580,7 @@ public class Window extends javax.swing.JFrame {
             CardLayout card = (CardLayout)MainPanel.getLayout();
             card.show(MainPanel, "gamePanel");
             heroStats();
+            Sim.setEditable(false);
         }
     }//GEN-LAST:event_jButton6ActionPerformed
 
@@ -507,6 +625,69 @@ public class Window extends javax.swing.JFrame {
         heroStats();
     }//GEN-LAST:event_jButton8ActionPerformed
 
+    private void fightButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fightButtonActionPerformed
+        // if FIGHT is clicked
+        //Battle fight = new Battle();
+        int fightResult = fight.fight(myHero, foundEnemy);
+        if (fightResult == 0) 
+        {
+            //if you win the fight
+            map.enemies.remove(foundEnemy);
+            if (fight.droppedArtefact == true)
+            {
+                CardLayout card = (CardLayout)MainPanel.getLayout();
+                card.show(MainPanel, "equipDiscard");
+            }
+        } 
+        else if (fightResult == 1) 
+        {
+            //if you win the fight and level up
+            map.enemies.remove(foundEnemy);
+            if (fight.droppedArtefact == true)
+            {
+                CardLayout card = (CardLayout)MainPanel.getLayout();
+                card.show(MainPanel, "equipDiscard");
+            }
+            map.newLevel(myHero);
+        }
+        CardLayout card = (CardLayout)MainPanel.getLayout();
+        card.show(MainPanel, "gamePanel");
+        heroStats();
+        Sim.setEditable(false);
+        Sim.setText(fight.guiFight);
+    }//GEN-LAST:event_fightButtonActionPerformed
+
+    private void runButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_runButtonActionPerformed
+        // if RUN is clicked
+        if (fight.run() == -1) 
+        {
+            if (fight.fight(myHero, foundEnemy) == 0)
+            {
+                map.enemies.remove(foundEnemy);
+                if (fight.droppedArtefact == true)
+                {
+                    CardLayout card = (CardLayout)MainPanel.getLayout();
+                    card.show(MainPanel, "equipDiscard");
+                }
+            }
+            else if (fight.fight(myHero, foundEnemy) == 1)
+            {
+                map.enemies.remove(foundEnemy);
+                if (fight.droppedArtefact == true)
+                {
+                    CardLayout card = (CardLayout)MainPanel.getLayout();
+                    card.show(MainPanel, "equipDiscard");
+                }
+                map.newLevel(myHero);
+            }
+        }
+        CardLayout card = (CardLayout)MainPanel.getLayout();
+        card.show(MainPanel, "gamePanel");
+        heroStats();
+        Sim.setEditable(false);
+        Sim.setText(fight.guiFight);
+    }//GEN-LAST:event_runButtonActionPerformed
+
     private void heroStats()
     {   
         String stats = "";
@@ -515,66 +696,58 @@ public class Window extends javax.swing.JFrame {
         stats += "Attack: " + myHero.getAttack() + "\n";
         stats += "Defense: " + myHero.getDefense() + "\n";
         stats += "Health: " + myHero.getHp() + "/" + myHero.getMaxHp() + "\n";
-        stats += "X pos: " + myHero.getXPos() + "\n";
-        stats += "Y pos: " + myHero.getYPos() + "\n";
-        for (Enemy enemy:map.enemies)
-        {
-            stats += "Ename: " +enemy.getName() + "\n";
-            stats += "EX pos: " + enemy.getXPos()+ "\n";
-            stats += "EY pos: " + enemy.getYPos() + "\n";
-        }
+        stats += "X: " + myHero.getXPos() + "\n";
+        stats += "Y: " + myHero.getYPos() + "\n";
+        
         gameStats.setEditable(false);
         gameStats.setText(stats);
+        enemyPos();
+    }
+    
+    private void enemyPos()
+    {
+        String stats = "";
+        for (Enemy enemy:map.enemies)
+        {
+            stats += enemy.getName() + "\n";
+            stats += "X: " + enemy.getXPos()+ " ";
+            stats += "Y: " + enemy.getYPos() + "\n";
+        }
+        
+        Map.setEditable(false);
+        Map.setText(stats);
     }
     
     private void checkGuiCollision(Hero hero)
     {
-        Enemy foundEnemy = null;
-        for (Enemy enemy : map.enemies) {
-            if (enemy.getXPos() == hero.getXPos() && enemy.getYPos() == hero.getYPos()) {
+        foundEnemy = null;
+        for (Enemy enemy : map.enemies)
+        {
+            if (enemy.getXPos() == hero.getXPos() && enemy.getYPos() == hero.getYPos()) 
+            {
                 foundEnemy = enemy;
             }
         }
-        if (foundEnemy != null) {
-            Battle fight = new Battle();
-            int guiFightCheck = guiFightCheck(hero, foundEnemy);
-//            while (fightCheck == 0) {
-//                fightCheck = fight.fightCheck(hero, foundEnemy);
-//            }
-            if (guiFightCheck == 1) {
-                int fightResult = fight.fight(hero, foundEnemy);
-                if (fightResult == 0) {
-
-                    //if you win the fight
-                    map.enemies.remove(foundEnemy);
-                } else if (fightResult == 1) {
-                    //if you win the fight and level up
-                    map.enemies.remove(foundEnemy);
-                    map.newLevel(hero);
-                }
-            } else if (guiFightCheck == -1) {
-                if (fight.run() == -1) {
-                    if (fight.fight(hero, foundEnemy) == 1)
-                        map.enemies.remove(foundEnemy);
-                }
-            }
+        if (foundEnemy != null) 
+        {
+                CardLayout card = (CardLayout)MainPanel.getLayout();
+                card.show(MainPanel, "fightRunPanel");
         }
-        Sim.setText(battle.guiFight);
     }
     
-    private int guiFightCheck(Hero hero, Enemy foundEnemy)
-    {      
-//        int FoR = ;
-//        if (FoR.equalsIgnoreCase("fight"))
-//        {
-//            return 1;
-//        }
-//        else if (FoR.equalsIgnoreCase("run"))
-//        {
-//            return -1;
-//        }
-        System.out.println("Theres no time for that!");
-        return 1;
+    public void guiFight(Hero hero, Enemy foundEnemy, Battle fight)
+    {
+        int fightResult = fight.fight(hero, foundEnemy);
+        if (fightResult == 0) 
+        {
+            //if you win the fight
+            map.enemies.remove(foundEnemy);
+        } else if (fightResult == 1) 
+        {
+            //if you win the fight and level up
+            map.enemies.remove(foundEnemy);
+            map.newLevel(hero);
+        }
     }
     
     public void createWindow()
@@ -613,6 +786,11 @@ public class Window extends javax.swing.JFrame {
     private javax.swing.JPanel SelectPanel;
     private javax.swing.JTextPane Sim;
     private javax.swing.JPanel StartPanel;
+    private javax.swing.JButton discardButton;
+    private javax.swing.JButton equipButton;
+    private javax.swing.JPanel equipDiscard;
+    private javax.swing.JButton fightButton;
+    private javax.swing.JPanel fightRunPanel;
     private javax.swing.JTextPane gameStats;
     private javax.swing.JTextArea heroList;
     private javax.swing.JLabel heroes;
@@ -629,6 +807,10 @@ public class Window extends javax.swing.JFrame {
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -643,6 +825,7 @@ public class Window extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JButton runButton;
     private javax.swing.JButton selectButton;
     private javax.swing.JTextField selectedHero;
     // End of variables declaration//GEN-END:variables
