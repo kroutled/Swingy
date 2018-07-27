@@ -1,5 +1,7 @@
 package co.za.kroutled.model.characters;
 
+import co.za.kroutled.model.artefacts.Artefact;
+
 public class Character {
 
     public              String name;
@@ -92,6 +94,11 @@ public class Character {
     public void setHp(int hp)
     {
         this.hitPoints = hp;
+    }
+    
+    public void setMaxHp(int maxHp)
+    {
+        this.maxHp = maxHp;
     }
 
 }

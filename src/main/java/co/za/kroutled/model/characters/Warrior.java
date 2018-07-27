@@ -16,13 +16,14 @@ public class Warrior extends Hero {
 
     }
 
-    public Warrior(String name, int att, int def, int hp, int xp, int lvl)
+    public Warrior(String name, int att, int def, int hp, int maxHp, int xp, int lvl)
     {
         this.setName(name);
         this.type = "Warrior";
         this.setAttack(att);
         this.setDefense(def);
         this.setHp(hp);
+        this.setMaxHp(maxHp);
         this.setlvl(lvl);
         this.setXp(xp);
     }

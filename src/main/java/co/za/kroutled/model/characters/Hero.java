@@ -110,4 +110,24 @@ public class Hero extends Character {
         //include growth stats
 
     }
+    
+        public String getArtefact()
+    {
+        if (helm != null)
+        {
+            return helm.getName();
+        }
+        else if (armor != null)
+        {
+            return armor.getName();
+        }
+        else if (weapon != null)
+        {
+            return weapon.getName();
+        }
+        else
+        {
+            return "none";
+        }
+    }
 }

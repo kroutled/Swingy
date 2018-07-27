@@ -696,6 +696,8 @@ public class Window extends javax.swing.JFrame {
         stats += "Attack: " + myHero.getAttack() + "\n";
         stats += "Defense: " + myHero.getDefense() + "\n";
         stats += "Health: " + myHero.getHp() + "/" + myHero.getMaxHp() + "\n";
+        stats += "Expirience: " + myHero.getXp() + "/" + myHero.neededXP + "\n";
+        stats += "Artefact: " + myHero.getArtefact() + "\n";
         stats += "X: " + myHero.getXPos() + "\n";
         stats += "Y: " + myHero.getYPos() + "\n";
         

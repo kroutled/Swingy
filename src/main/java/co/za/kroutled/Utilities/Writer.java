@@ -18,7 +18,7 @@ public class Writer {
             fw = new FileWriter("/home/kyle/dev/java/Swingy/test.txt", true);
             bw = new BufferedWriter(fw);
             out = new PrintWriter(bw);
-            out.println(hero.getName() + "," + hero.getType() + "," + hero.getAttack() + "," + hero.getDefense() + "," + hero.getHp() + "," + hero.getXp() + "," + hero.getLvl() + ","
+            out.println(hero.getName() + "," + hero.getType() + "," + hero.getAttack() + "," + hero.getDefense() + "," + hero.getHp() + "," + hero.getMaxHp() + "," + hero.getXp() + "," + hero.getLvl() + ","
                     + artefactString(hero));
             out.close();
         }

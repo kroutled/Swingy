@@ -28,7 +28,7 @@ public class Print {
         System.out.println("XP: " + myHero.getXp() + "/" + myHero.neededXP);
         System.out.println("Attack: " + myHero.getAttack());
         System.out.println("Defense: " + myHero.getDefense());
-        System.out.println("Artefact: ");
+        System.out.println("Artefact: " + myHero.getArtefact());
         System.out.println("---------------");
     }
 

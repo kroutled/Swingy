@@ -1,6 +1,6 @@
-heyoo,Druid,18,14,120,0,1,null,null,null
-kyle,Warrior,20,16,100,0,1,null,null,null
-Tpang,Mage,27,8,98,715,1,null,null,null
-bitch,Warrior,20,16,100,0,1,null,null,null
-Kieran,Druid,25,14,120,108,2,null,null,Sword#7
-Binky,Druid,18,14,122,0,2,Barbute#2,null,null
+heyoo,Druid,18,14,120,120,0,1,null,null,null
+kyle,Warrior,20,16,100,100,0,1,null,null,null
+Tpang,Mage,27,8,98,100,715,1,null,null,null
+bitch,Warrior,20,16,100,100,0,1,null,null,null
+Kieran,Druid,25,14,120,120,108,2,null,null,Sword#7
+Binky,Druid,18,14,122,120,0,2,Barbute#2,null,null

@@ -18,13 +18,14 @@ public class Druid extends Hero{
 
     }
 
-    public Druid(String name, int att, int def, int hp, int xp, int lvl)
+    public Druid(String name, int att, int def, int hp, int maxHp, int xp, int lvl)
     {
         this.setName(name);
         this.type = "Druid";
         this.setAttack(att);
         this.setDefense(def);
         this.setHp(hp);
+        this.setMaxHp(maxHp);
         this.setlvl(lvl);
         this.setXp(xp);
     }

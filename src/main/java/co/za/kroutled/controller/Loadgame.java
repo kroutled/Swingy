@@ -44,22 +44,23 @@ public class Loadgame {
         int     att = Integer.parseInt(heroAtts[2]);
         int     def = Integer.parseInt(heroAtts[3]);
         int     hp = Integer.parseInt(heroAtts[4]);
-        int     xp = Integer.parseInt(heroAtts[5]);
-        int     lvl = Integer.parseInt(heroAtts[6]);
+        int     maxHp = Integer.parseInt(heroAtts[5]);
+        int     xp = Integer.parseInt(heroAtts[6]);
+        int     lvl = Integer.parseInt(heroAtts[7]);
 
-        String artefacts[] = { heroAtts[7], heroAtts[8], heroAtts[9] };
+        String artefacts[] = { heroAtts[8], heroAtts[9], heroAtts[10] };
 
         Hero hero = new Hero();
         switch(type)
         {
             case "Druid":
-                hero = new Druid(name, att, def, hp, xp, lvl);
+                hero = new Druid(name, att, def, hp, maxHp, xp, lvl);
                 break;
             case "Mage":
-                hero = new Mage(name, att, def, hp, xp, lvl);
+                hero = new Mage(name, att, def, hp, maxHp, xp, lvl);
                 break;
             case "Warrior":
-                hero = new Warrior(name, att, def, hp, xp, lvl);
+                hero = new Warrior(name, att, def, hp, maxHp, xp, lvl);
                 break;
         }
         if (hero.getType() != null)
