@@ -1,8 +1,11 @@
 package co.za.kroutled.model.artefacts;
 
+import javax.validation.constraints.NotNull;
+
 public class Artefact {
 
     protected String    type;
+    @NotNull(message = "Name cannot be null")
     protected String    name;
     protected int       boost;
     protected int       level;

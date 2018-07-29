@@ -8,6 +8,9 @@ import co.za.kroutled.model.characters.*;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 
 public class Loadgame {
 
@@ -41,6 +44,8 @@ public class Loadgame {
         String  heroAtts[] = heroLine.split(",");
         String  name = heroAtts[0];
         String  type = heroAtts[1];
+        @Min(value = 0, message = "Attack should be higher than 0")
+        @Max(value = 200, message = "Attack cannot be higher than 200")
         int     att = Integer.parseInt(heroAtts[2]);
         int     def = Integer.parseInt(heroAtts[3]);
         int     hp = Integer.parseInt(heroAtts[4]);
@@ -54,13 +59,13 @@ public class Loadgame {
         switch(type)
         {
             case "Druid":
-                hero = new Druid(name, att, def, hp, maxHp, xp, lvl);
+                hero = new Druid(name, att, def, hp, maxHp, xp, lvl - 1);
                 break;
             case "Mage":
-                hero = new Mage(name, att, def, hp, maxHp, xp, lvl);
+                hero = new Mage(name, att, def, hp, maxHp, xp, lvl - 1);
                 break;
             case "Warrior":
-                hero = new Warrior(name, att, def, hp, maxHp, xp, lvl);
+                hero = new Warrior(name, att, def, hp, maxHp, xp, lvl - 1);
                 break;
         }
         if (hero.getType() != null)

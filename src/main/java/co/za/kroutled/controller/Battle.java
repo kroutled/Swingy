@@ -16,7 +16,7 @@ public class Battle {
 
     public static String guiFight;
     public static String guiArtefact;
-    public static boolean droppedArtefact;
+    public static int droppedArtefact;
     
     public int fightCheck(Hero hero, Enemy enemy)
     {
@@ -110,13 +110,14 @@ public class Battle {
          Random rand = new Random();
          Game game = new Game();
          guiArtefact = "";
-         this.droppedArtefact = false;
+         this.droppedArtefact = 0;
          int    dropChance = rand.nextInt(10);
+         
          if (dropChance > 1 && dropChance < 5)
          {
-             this.droppedArtefact = true;
              Artefact[] artefacts = {new Weapon(hero.getLvl()), new Armor(hero.getLvl()), new Helm(hero.getLvl())};
              Artefact foundArtefact = artefacts[dropChance - 2];
+             this.droppedArtefact = 1;
              System.out.println("It appears that a " + foundArtefact.getName() + " has dropepd!");
              guiArtefact += "It appears that a " + foundArtefact.getName() + " has dropepd!";
              String boost = "";

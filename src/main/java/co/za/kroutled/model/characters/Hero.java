@@ -1,11 +1,20 @@
 package co.za.kroutled.model.characters;
 
 import  co.za.kroutled.model.artefacts.*;
+import static java.nio.file.Files.size;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.Size;
 
 public class Hero extends Character {
 
+    @Min(value = 0, message = "Min level is 0")
+    @Max(value = 4, message = "Max level is 4")
     private int  lvl;
+    @Min(value = 0, message = "Min XP is 0")
     private int  xp = 0;
+    @Size(min = 4, max = 10, message 
+      = "Type should be min 4(Mage) and max 7(Warrior)")
     protected String type;
     public int neededXP;
 
@@ -28,6 +37,7 @@ public class Hero extends Character {
         super(name,attack, defense, hitPoints, maxHp);
         this.lvl = lvl;
         this.lvl = xp;
+        this.neededXP = 0;
         this.neededXP = Math.abs((int) (this.lvl * 1000 + (Math.pow(this.lvl - 1 , 2) * 450)));
     }
 
@@ -68,9 +78,9 @@ public class Hero extends Character {
     public void setHelm(Helm helm)
     {
         if (this.helm != null)
-            this.hitPoints -= this.weapon.getBoost();
+            this.maxHp -= this.weapon.getBoost();
         this.helm = helm;
-        this.hitPoints += helm.getBoost();
+        this.maxHp += helm.getBoost();
     }
 
     public void setArmor(Armor armor)

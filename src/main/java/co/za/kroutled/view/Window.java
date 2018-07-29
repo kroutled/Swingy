@@ -5,6 +5,7 @@
  */
 package co.za.kroutled.view;
 
+import co.za.kroutled.Utilities.Writer;
 import co.za.kroutled.controller.Battle;
 import co.za.kroutled.controller.Loadgame;
 import co.za.kroutled.model.Map;
@@ -44,6 +45,8 @@ public class Window extends javax.swing.JFrame {
         heroes = new javax.swing.JLabel();
         jScrollPane5 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        winText = new javax.swing.JTextArea();
         MainPanel = new javax.swing.JPanel();
         StartPanel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -89,6 +92,12 @@ public class Window extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         equipButton = new javax.swing.JButton();
         discardButton = new javax.swing.JButton();
+        winPanel = new javax.swing.JPanel();
+        jButton11 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        winText1 = new javax.swing.JLabel();
 
         jButton1.setText("jButton1");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -103,6 +112,10 @@ public class Window extends javax.swing.JFrame {
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jScrollPane5.setViewportView(jTextArea1);
+
+        winText.setColumns(20);
+        winText.setRows(5);
+        jScrollPane6.setViewportView(winText);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -219,7 +232,7 @@ public class Window extends javax.swing.JFrame {
                             .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(296, Short.MAX_VALUE))
+                .addContainerGap(344, Short.MAX_VALUE))
         );
         CreatePanelLayout.setVerticalGroup(
             CreatePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -277,7 +290,7 @@ public class Window extends javax.swing.JFrame {
                     .addGroup(SelectPanelLayout.createSequentialGroup()
                         .addGap(293, 293, 293)
                         .addComponent(selectButton)))
-                .addContainerGap(271, Short.MAX_VALUE))
+                .addContainerGap(319, Short.MAX_VALUE))
         );
         SelectPanelLayout.setVerticalGroup(
             SelectPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -456,44 +469,113 @@ public class Window extends javax.swing.JFrame {
         jLabel14.setText("Would you like to:");
 
         equipButton.setText("Equip");
+        equipButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                equipButtonActionPerformed(evt);
+            }
+        });
 
         discardButton.setText("Discard");
+        discardButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                discardButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout equipDiscardLayout = new javax.swing.GroupLayout(equipDiscard);
         equipDiscard.setLayout(equipDiscardLayout);
         equipDiscardLayout.setHorizontalGroup(
             equipDiscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, equipDiscardLayout.createSequentialGroup()
-                .addGap(0, 197, Short.MAX_VALUE)
-                .addComponent(jLabel13)
-                .addGap(135, 135, 135))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, equipDiscardLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(equipDiscardLayout.createSequentialGroup()
                 .addGroup(equipDiscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, equipDiscardLayout.createSequentialGroup()
-                        .addComponent(jLabel14)
-                        .addGap(286, 286, 286))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, equipDiscardLayout.createSequentialGroup()
+                    .addGroup(equipDiscardLayout.createSequentialGroup()
+                        .addGap(292, 292, 292)
+                        .addComponent(jLabel14))
+                    .addGroup(equipDiscardLayout.createSequentialGroup()
+                        .addGap(158, 158, 158)
+                        .addComponent(jLabel13))
+                    .addGroup(equipDiscardLayout.createSequentialGroup()
+                        .addGap(317, 317, 317)
                         .addGroup(equipDiscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(discardButton)
-                            .addComponent(equipButton, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(298, 298, 298))))
+                            .addComponent(equipButton, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(222, Short.MAX_VALUE))
         );
         equipDiscardLayout.setVerticalGroup(
             equipDiscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(equipDiscardLayout.createSequentialGroup()
-                .addGap(29, 29, 29)
+                .addGap(40, 40, 40)
                 .addComponent(jLabel13)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel14)
-                .addGap(18, 18, 18)
+                .addGap(30, 30, 30)
                 .addComponent(equipButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(discardButton)
-                .addContainerGap(283, Short.MAX_VALUE))
+                .addContainerGap(260, Short.MAX_VALUE))
         );
 
         MainPanel.add(equipDiscard, "equipDiscard");
+
+        jButton11.setText("Yes");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
+
+        jButton12.setText("No");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
+
+        jLabel15.setText("Congratulations!");
+
+        jLabel16.setText("would you like to save?");
+
+        winText1.setText("You have won this level");
+
+        javax.swing.GroupLayout winPanelLayout = new javax.swing.GroupLayout(winPanel);
+        winPanel.setLayout(winPanelLayout);
+        winPanelLayout.setHorizontalGroup(
+            winPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, winPanelLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(300, 300, 300))
+            .addGroup(winPanelLayout.createSequentialGroup()
+                .addGroup(winPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(winPanelLayout.createSequentialGroup()
+                        .addGap(299, 299, 299)
+                        .addGroup(winPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(winText1, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(winPanelLayout.createSequentialGroup()
+                        .addGap(355, 355, 355)
+                        .addGroup(winPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton11))))
+                .addContainerGap(309, Short.MAX_VALUE))
+        );
+        winPanelLayout.setVerticalGroup(
+            winPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(winPanelLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(jLabel15)
+                .addGap(18, 18, 18)
+                .addComponent(winText1)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel16)
+                .addGap(41, 41, 41)
+                .addComponent(jButton11)
+                .addGap(18, 18, 18)
+                .addComponent(jButton12)
+                .addContainerGap(218, Short.MAX_VALUE))
+        );
+
+        MainPanel.add(winPanel, "winPanel");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -632,22 +714,22 @@ public class Window extends javax.swing.JFrame {
         if (fightResult == 0) 
         {
             //if you win the fight
-            map.enemies.remove(foundEnemy);
-            if (fight.droppedArtefact == true)
+            if (fight.droppedArtefact == 1)
             {
                 CardLayout card = (CardLayout)MainPanel.getLayout();
                 card.show(MainPanel, "equipDiscard");
             }
+            map.enemies.remove(foundEnemy);
         } 
         else if (fightResult == 1) 
         {
             //if you win the fight and level up
-            map.enemies.remove(foundEnemy);
-            if (fight.droppedArtefact == true)
+            if (fight.droppedArtefact == 1)
             {
                 CardLayout card = (CardLayout)MainPanel.getLayout();
                 card.show(MainPanel, "equipDiscard");
             }
+            map.enemies.remove(foundEnemy);
             map.newLevel(myHero);
         }
         CardLayout card = (CardLayout)MainPanel.getLayout();
@@ -661,19 +743,19 @@ public class Window extends javax.swing.JFrame {
         // if RUN is clicked
         if (fight.run() == -1) 
         {
-            if (fight.fight(myHero, foundEnemy) == 0)
+            if (this.fight.fight(myHero, foundEnemy) == 0)
             {
                 map.enemies.remove(foundEnemy);
-                if (fight.droppedArtefact == true)
+                if (fight.droppedArtefact == 1)
                 {
                     CardLayout card = (CardLayout)MainPanel.getLayout();
                     card.show(MainPanel, "equipDiscard");
                 }
             }
-            else if (fight.fight(myHero, foundEnemy) == 1)
+            else if (this.fight.fight(myHero, foundEnemy) == 1)
             {
                 map.enemies.remove(foundEnemy);
-                if (fight.droppedArtefact == true)
+                if (fight.droppedArtefact == 1)
                 {
                     CardLayout card = (CardLayout)MainPanel.getLayout();
                     card.show(MainPanel, "equipDiscard");
@@ -688,11 +770,44 @@ public class Window extends javax.swing.JFrame {
         Sim.setText(fight.guiFight);
     }//GEN-LAST:event_runButtonActionPerformed
 
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        // yes to save
+        Writer write = new Writer();
+        write.saveHero(myHero);
+        CardLayout card = (CardLayout)MainPanel.getLayout();
+        card.show(MainPanel, "startPanel");
+        map.enemies.clear();
+        Sim.setEditable(false);
+        Sim.setText("");
+        Map.setEditable(false);
+        Map.setText("");
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        // no to not save
+        CardLayout card = (CardLayout)MainPanel.getLayout();
+        card.show(MainPanel, "startPanel");
+        map.enemies.clear();
+        Sim.setEditable(false);
+        Sim.setText("");
+        Map.setEditable(false);
+        Map.setText("");
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void equipButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equipButtonActionPerformed
+        // Equip item
+    }//GEN-LAST:event_equipButtonActionPerformed
+
+    private void discardButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_discardButtonActionPerformed
+        // Discard item
+    }//GEN-LAST:event_discardButtonActionPerformed
+
     private void heroStats()
     {   
         String stats = "";
         stats += "Name: " + myHero.getName() + "\n";
         stats += "Class: " + myHero.getType() + "\n";
+        stats += "Level: " + myHero.getLvl() + "\n";
         stats += "Attack: " + myHero.getAttack() + "\n";
         stats += "Defense: " + myHero.getDefense() + "\n";
         stats += "Health: " + myHero.getHp() + "/" + myHero.getMaxHp() + "\n";
@@ -700,6 +815,7 @@ public class Window extends javax.swing.JFrame {
         stats += "Artefact: " + myHero.getArtefact() + "\n";
         stats += "X: " + myHero.getXPos() + "\n";
         stats += "Y: " + myHero.getYPos() + "\n";
+        stats += fight.droppedArtefact + "\n";
         
         gameStats.setEditable(false);
         gameStats.setText(stats);
@@ -734,6 +850,21 @@ public class Window extends javax.swing.JFrame {
         {
                 CardLayout card = (CardLayout)MainPanel.getLayout();
                 card.show(MainPanel, "fightRunPanel");
+        }
+        checkInMap(map, myHero);
+    }
+    
+    public void checkInMap(Map map, Hero hero)
+    {
+        if (hero.getXPos() < 0 || hero.getXPos() > map.mapX)
+        {
+            CardLayout card = (CardLayout)MainPanel.getLayout();
+            card.show(MainPanel, "winPanel");
+        }
+        else if (hero.getYPos() < 0 || hero.getYPos() > map.mapY)
+        {
+            CardLayout card = (CardLayout)MainPanel.getLayout();
+            card.show(MainPanel, "winPanel");
         }
     }
     
@@ -799,6 +930,8 @@ public class Window extends javax.swing.JFrame {
     private javax.swing.JTextField inputName;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -813,6 +946,8 @@ public class Window extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -826,9 +961,13 @@ public class Window extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JButton runButton;
     private javax.swing.JButton selectButton;
     private javax.swing.JTextField selectedHero;
+    private javax.swing.JPanel winPanel;
+    private javax.swing.JTextArea winText;
+    private javax.swing.JLabel winText1;
     // End of variables declaration//GEN-END:variables
 }

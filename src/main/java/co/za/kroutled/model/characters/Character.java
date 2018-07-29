@@ -1,12 +1,22 @@
 package co.za.kroutled.model.characters;
 
 import co.za.kroutled.model.artefacts.Artefact;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 
 public class Character {
 
+    @NotNull(message = "Name cannot be null")
     public              String name;
+    @Min(value = 0, message = "Attack should be higher than 0")
+    @Max(value = 200, message = "Attack cannot be higher than 200")
     protected int       attack;
+    @Min(value = 0, message = "Defense should be higher than 0")
+    @Max(value = 200, message = "Defense cannot be higher than 200")
     protected int       defense;
+    @Min(value = 0, message = "Health should be higher than 0")
+    @Max(value = 200, message = "Health cannot be higher than 200")
     protected int       hitPoints;
     protected int       maxHp;
     protected int       XPos;
