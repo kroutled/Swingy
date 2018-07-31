@@ -735,6 +735,10 @@ public class Window extends javax.swing.JFrame {
             map.enemies.remove(foundEnemy);
             map.newLevel(myHero);
         }
+        else
+        {
+            card.show(MainPanel, "startPanel");
+        }
 
         card.show(MainPanel, "gamePanel");
         heroStats();

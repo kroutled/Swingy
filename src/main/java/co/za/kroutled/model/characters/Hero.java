@@ -26,7 +26,7 @@ public class Hero extends Character {
 
     public Hero(String name)
     {
-        super (name, 15, 6, 100, 100);
+        super (name, 15, 3, 100, 100);
         this.lvl = 1;
         this.xp = 0;
         this.neededXP = Math.abs((int) (this.lvl * 1000 + (Math.pow(this.lvl - 1 , 2) * 450)));

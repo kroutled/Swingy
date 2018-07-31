@@ -138,8 +138,10 @@ public class Map {
     {
         for (Enemy enemy : enemies)
         {
+            System.out.printf("\n");
             System.out.printf("Enemy %s\n", enemy.getName());
             System.out.printf("Position x:%d y:%d\n", enemy.getXPos(), enemy.getYPos());
+            System.out.printf("\n");
             break;
         }
         System.out.printf("\n");
