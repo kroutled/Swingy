@@ -90,7 +90,7 @@ public class Game {
             utils.sleep(1000);
             while (move(map, scan) != -1)
             {
-                System.out.printf("Position x:%d, y:%d\n", myHero.getXPos(), myHero.getYPos());
+                System.out.printf("Your position x:%d, y:%d\n", myHero.getXPos(), myHero.getYPos());
                 map.checkCollision(myHero);
                 if (myHero.getHp() == 0)
                 {
@@ -144,7 +144,7 @@ public class Game {
             case "exit":
                 return - 1;
             default:
-                System.out.println("Invalid input");
+                System.out.println("\n Invalid input \n");
         }
         return 0;
     }

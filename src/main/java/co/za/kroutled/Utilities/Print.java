@@ -20,6 +20,7 @@ public class Print {
 
     public void printStats(Hero myHero)
     {
+        System.out.println("\n");
         System.out.println("-----STATS-----");
         System.out.println("Name: " + myHero.getName());
         System.out.println("Class: " + myHero.getType());
@@ -30,6 +31,7 @@ public class Print {
         System.out.println("Defense: " + myHero.getDefense());
         System.out.println("Artefact: " + myHero.getArtefact());
         System.out.println("---------------");
+        System.out.println("\n");
     }
 
     public void printClasses()

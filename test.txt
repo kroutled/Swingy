@@ -10,3 +10,5 @@ yourmom,Warrior,20,16,100,100,0,1,null,null,null
 yourmom,Warrior,20,16,100,100,0,1,null,null,null
 asd,Mage,27,8,100,100,0,1,null,null,null
 hero,Druid,18,14,120,120,273,1,null,null,null
+yourmom,Warrior,20,16,100,100,363,1,null,null,null
+yourmom,Warrior,20,16,100,100,363,1,null,null,null
