@@ -1,3 +1,5 @@
 test,Druid,18,14,120,120,559,1,null,null,null
 test,Druid,18,14,120,120,559,1,null,null,null
 asd,Mage,27,8,96,100,942,1,null,null,null
+test,Druid,18,14,120,120,315,2,null,null,null
+Andrew,Warrior,20,16,100,100,132,2,null,null,null

@@ -27,9 +27,7 @@ public class Game {
             }
             else {
                 String temp = args[0];
-                String filename = args[1];
-                System.out.println(temp);
-                new Game(temp, filename);
+                new Game(temp);
 
             }
         }
@@ -41,7 +39,7 @@ public class Game {
 
     public Game() {}
     
-    public Game(String args, String filename)
+    public Game(String args)
     {
         String  name;
         int     type;

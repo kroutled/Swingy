@@ -25,11 +25,14 @@ public class Window extends javax.swing.JFrame {
     Map map;
     Loadgame load = new Loadgame();
     Battle fight = new Battle();
+    CardLayout card;
+
     /**
      * Creates new form Window
      */
     public Window() {
         initComponents();
+        card =  (CardLayout)MainPanel.getLayout();
     }
 
     /**
@@ -592,17 +595,17 @@ public class Window extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        CardLayout card = (CardLayout)MainPanel.getLayout();
+
         card.show(MainPanel, "createPanel");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        CardLayout card = (CardLayout)MainPanel.getLayout();
+
         card.show(MainPanel, "createPanel");
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        CardLayout card = (CardLayout)MainPanel.getLayout();
+
         card.show(MainPanel, "selectPanel");
         List<Hero> heroes;
         heroes = load.createHeros();
@@ -625,7 +628,7 @@ public class Window extends javax.swing.JFrame {
             myHero = new Druid(name);
             map = new Map(myHero);
             map.newLevel(myHero);
-            CardLayout card = (CardLayout)MainPanel.getLayout();
+
             card.show(MainPanel, "gamePanel");
             Sim.setEditable(false);
             heroStats();
@@ -644,7 +647,7 @@ public class Window extends javax.swing.JFrame {
             myHero = new Mage(name);
             map = new Map(myHero);
             map.newLevel(myHero);
-            CardLayout card = (CardLayout)MainPanel.getLayout();
+
             card.show(MainPanel, "gamePanel");
             Sim.setEditable(false);
             heroStats();
@@ -659,7 +662,7 @@ public class Window extends javax.swing.JFrame {
             myHero = new Warrior(name);
             map = new Map(myHero);
             map.newLevel(myHero);
-            CardLayout card = (CardLayout)MainPanel.getLayout();
+
             card.show(MainPanel, "gamePanel");
             heroStats();
             Sim.setEditable(false);
@@ -674,7 +677,7 @@ public class Window extends javax.swing.JFrame {
         myHero = heroes.get(option - 1);
         map = new Map(myHero);
         map.newLevel(myHero);
-        CardLayout card = (CardLayout)MainPanel.getLayout();
+
         card.show(MainPanel, "gamePanel");
         heroStats();
     }//GEN-LAST:event_selectButtonActionPerformed
@@ -714,9 +717,10 @@ public class Window extends javax.swing.JFrame {
         if (fightResult == 0) 
         {
             //if you win the fight
+            card.show(MainPanel, "equipDiscard");
+            System.out.println(fight.droppedArtefact);
             if (fight.droppedArtefact == 1)
             {
-                CardLayout card = (CardLayout)MainPanel.getLayout();
                 card.show(MainPanel, "equipDiscard");
             }
             map.enemies.remove(foundEnemy);
@@ -726,13 +730,12 @@ public class Window extends javax.swing.JFrame {
             //if you win the fight and level up
             if (fight.droppedArtefact == 1)
             {
-                CardLayout card = (CardLayout)MainPanel.getLayout();
                 card.show(MainPanel, "equipDiscard");
             }
             map.enemies.remove(foundEnemy);
             map.newLevel(myHero);
         }
-        CardLayout card = (CardLayout)MainPanel.getLayout();
+
         card.show(MainPanel, "gamePanel");
         heroStats();
         Sim.setEditable(false);
@@ -745,10 +748,11 @@ public class Window extends javax.swing.JFrame {
         {
             if (this.fight.fight(myHero, foundEnemy) == 0)
             {
+
                 map.enemies.remove(foundEnemy);
                 if (fight.droppedArtefact == 1)
                 {
-                    CardLayout card = (CardLayout)MainPanel.getLayout();
+
                     card.show(MainPanel, "equipDiscard");
                 }
             }
@@ -757,13 +761,13 @@ public class Window extends javax.swing.JFrame {
                 map.enemies.remove(foundEnemy);
                 if (fight.droppedArtefact == 1)
                 {
-                    CardLayout card = (CardLayout)MainPanel.getLayout();
+
                     card.show(MainPanel, "equipDiscard");
                 }
                 map.newLevel(myHero);
             }
         }
-        CardLayout card = (CardLayout)MainPanel.getLayout();
+
         card.show(MainPanel, "gamePanel");
         heroStats();
         Sim.setEditable(false);
@@ -774,7 +778,7 @@ public class Window extends javax.swing.JFrame {
         // yes to save
         Writer write = new Writer();
         write.saveHero(myHero);
-        CardLayout card = (CardLayout)MainPanel.getLayout();
+
         card.show(MainPanel, "startPanel");
         map.enemies.clear();
         Sim.setEditable(false);
@@ -785,7 +789,7 @@ public class Window extends javax.swing.JFrame {
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         // no to not save
-        CardLayout card = (CardLayout)MainPanel.getLayout();
+
         card.show(MainPanel, "startPanel");
         map.enemies.clear();
         Sim.setEditable(false);
@@ -796,10 +800,12 @@ public class Window extends javax.swing.JFrame {
 
     private void equipButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equipButtonActionPerformed
         // Equip item
+        card.show(MainPanel, "gamePanel");
     }//GEN-LAST:event_equipButtonActionPerformed
 
     private void discardButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_discardButtonActionPerformed
         // Discard item
+        card.show(MainPanel, "gamePanel");
     }//GEN-LAST:event_discardButtonActionPerformed
 
     private void heroStats()
@@ -848,7 +854,7 @@ public class Window extends javax.swing.JFrame {
         }
         if (foundEnemy != null) 
         {
-                CardLayout card = (CardLayout)MainPanel.getLayout();
+
                 card.show(MainPanel, "fightRunPanel");
         }
         checkInMap(map, myHero);
@@ -858,12 +864,12 @@ public class Window extends javax.swing.JFrame {
     {
         if (hero.getXPos() < 0 || hero.getXPos() > map.mapX)
         {
-            CardLayout card = (CardLayout)MainPanel.getLayout();
+
             card.show(MainPanel, "winPanel");
         }
         else if (hero.getYPos() < 0 || hero.getYPos() > map.mapY)
         {
-            CardLayout card = (CardLayout)MainPanel.getLayout();
+
             card.show(MainPanel, "winPanel");
         }
     }

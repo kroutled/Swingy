@@ -2,24 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c002bad-5970-4f18-8752-550219736da0" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/za/kroutled/controller/Loadgame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/za/kroutled/Utilities/Reader.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/za/kroutled/Utilities/Writer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/za/kroutled/Utilities/Writer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/za/kroutled/controller/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/za/kroutled/controller/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/za/kroutled/model/artefacts/Armor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/za/kroutled/model/artefacts/Armor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/za/kroutled/model/artefacts/Helm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/za/kroutled/model/artefacts/Helm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/za/kroutled/model/artefacts/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/za/kroutled/model/artefacts/Weapon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/za/kroutled/model/characters/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/za/kroutled/model/characters/Character.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/za/kroutled/model/characters/Druid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/za/kroutled/model/characters/Druid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/za/kroutled/model/characters/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/za/kroutled/model/characters/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/za/kroutled/model/characters/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/za/kroutled/model/characters/Mage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/za/kroutled/model/characters/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/za/kroutled/model/characters/Warrior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/co/za/kroutled/Utilities/Reader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/co/za/kroutled/controller/Game.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-kroutled.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-kroutled.AppTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/kroutled.AppTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/kroutled.AppTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/swingy-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/swingy-1.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/za/kroutled/controller/Loadgame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/za/kroutled/controller/Loadgame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/za/kroutled/view/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/za/kroutled/view/Window.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/co/za/kroutled/Utilities/Writer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/co/za/kroutled/Utilities/Writer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/co/za/kroutled/controller/Loadgame.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/co/za/kroutled/controller/Loadgame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/co/za/kroutled/view/Window$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/co/za/kroutled/view/Window$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/co/za/kroutled/view/Window$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/co/za/kroutled/view/Window$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/co/za/kroutled/view/Window$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/co/za/kroutled/view/Window$11.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/co/za/kroutled/view/Window$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/co/za/kroutled/view/Window$12.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/co/za/kroutled/view/Window$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/co/za/kroutled/view/Window$13.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/co/za/kroutled/view/Window$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/co/za/kroutled/view/Window$14.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/co/za/kroutled/view/Window$15.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/co/za/kroutled/view/Window$15.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/co/za/kroutled/view/Window$16.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/co/za/kroutled/view/Window$16.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/co/za/kroutled/view/Window$17.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/co/za/kroutled/view/Window$17.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/co/za/kroutled/view/Window$18.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/co/za/kroutled/view/Window$18.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/co/za/kroutled/view/Window$19.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/co/za/kroutled/view/Window$19.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/co/za/kroutled/view/Window$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/co/za/kroutled/view/Window$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/co/za/kroutled/view/Window$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/co/za/kroutled/view/Window$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/co/za/kroutled/view/Window$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/co/za/kroutled/view/Window$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/co/za/kroutled/view/Window$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/co/za/kroutled/view/Window$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/co/za/kroutled/view/Window$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/co/za/kroutled/view/Window$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/co/za/kroutled/view/Window$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/co/za/kroutled/view/Window$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/co/za/kroutled/view/Window$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/co/za/kroutled/view/Window$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/co/za/kroutled/view/Window$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/co/za/kroutled/view/Window$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/co/za/kroutled/view/Window.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/co/za/kroutled/view/Window.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -32,11 +40,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/co/za/kroutled/controller/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="590">
-              <caret line="80" column="49" selection-start-line="80" selection-start-column="49" selection-end-line="80" selection-end-column="49" />
+            <state relative-caret-position="1080">
+              <caret line="80" column="17" selection-start-line="80" selection-start-column="17" selection-end-line="80" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -47,8 +55,20 @@
       <file leaf-file-name="Writer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/co/za/kroutled/Utilities/Writer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="74" />
+            <state relative-caret-position="225">
+              <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Window.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/co/za/kroutled/view/Window.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2355">
+              <caret line="719" column="49" selection-start-line="719" selection-start-column="49" selection-end-line="719" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -60,7 +80,7 @@
         <entry file="file://$PROJECT_DIR$/test.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
-              <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -68,8 +88,8 @@
       <file leaf-file-name="Loadgame.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/co/za/kroutled/controller/Loadgame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="38" column="46" lean-forward="true" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
+            <state relative-caret-position="195">
+              <caret line="23" column="67" selection-start-line="23" selection-start-column="67" selection-end-line="23" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -80,17 +100,8 @@
       <file leaf-file-name="Artefact.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/co/za/kroutled/model/artefacts/Artefact.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
+            <state relative-caret-position="330">
               <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Helm.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/co/za/kroutled/model/artefacts/Helm.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="29" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -98,25 +109,8 @@
       <file leaf-file-name="Hero.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/co/za/kroutled/model/characters/Hero.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1380">
+            <state relative-caret-position="1275">
               <caret line="104" column="5" selection-start-line="104" selection-start-column="5" selection-end-line="104" selection-end-column="5" />
-              <folding>
-                <element signature="e#2128#2129#0" expanded="true" />
-                <element signature="e#2150#2151#0" expanded="true" />
-                <element signature="e#2195#2196#0" expanded="true" />
-                <element signature="e#2222#2223#0" expanded="true" />
-                <element signature="e#2269#2270#0" expanded="true" />
-                <element signature="e#2294#2295#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Map.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/co/za/kroutled/model/Map.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1325">
-              <caret line="158" column="42" selection-start-line="158" selection-start-column="42" selection-end-line="158" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -124,8 +118,8 @@
       <file leaf-file-name="Battle.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/co/za/kroutled/controller/Battle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1145">
-              <caret line="34" column="34" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
+            <state relative-caret-position="1665">
+              <caret line="119" column="38" selection-start-line="119" selection-start-column="38" selection-end-line="119" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -133,11 +127,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Character.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Character.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/co/za/kroutled/model/characters/Character.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="95" selection-start-line="95" selection-end-line="95" />
+            <state relative-caret-position="420">
+              <caret line="31" column="31" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
+              <folding>
+                <element signature="e#2065#2066#0" expanded="true" />
+                <element signature="e#2098#2099#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="600">
+              <caret line="40" column="16" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -150,6 +157,13 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>(CardLayout)MainPanel.getLayout();</find>
+      <find>equipDiscard</find>
+      <find>equipButton</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -168,7 +182,6 @@
         <option value="$PROJECT_DIR$/src/main/java/co/za/kroutled/model/heroes/Character.java" />
         <option value="$PROJECT_DIR$/src/main/java/co/za/kroutled/model/heroes/Enemy.java" />
         <option value="$PROJECT_DIR$/src/main/java/co/za/kroutled/model/heroes/Hero.java" />
-        <option value="$PROJECT_DIR$/src/main/java/co/za/kroutled/view/Window.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/co/za/kroutled/model/characters/Enemy.java" />
         <option value="$PROJECT_DIR$/src/main/java/co/za/kroutled/model/artefacts/EArtefacts.java" />
@@ -187,10 +200,11 @@
         <option value="$PROJECT_DIR$/src/main/java/co/za/kroutled/model/artefacts/Weapon.java" />
         <option value="$PROJECT_DIR$/src/main/java/co/za/kroutled/model/artefacts/Armor.java" />
         <option value="$PROJECT_DIR$/src/main/java/co/za/kroutled/model/characters/Hero.java" />
-        <option value="$PROJECT_DIR$/src/main/java/co/za/kroutled/Utilities/Writer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/co/za/kroutled/controller/Loadgame.java" />
         <option value="$PROJECT_DIR$/test.txt" />
         <option value="$PROJECT_DIR$/src/main/java/co/za/kroutled/controller/Game.java" />
+        <option value="$PROJECT_DIR$/src/main/java/co/za/kroutled/controller/Loadgame.java" />
+        <option value="$PROJECT_DIR$/src/main/java/co/za/kroutled/Utilities/Writer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/co/za/kroutled/view/Window.java" />
       </list>
     </option>
   </component>
@@ -221,9 +235,11 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-33" />
+    <option name="y" value="23" />
     <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="height" value="977" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -232,34 +248,35 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="kroutled" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Swingy" type="462c0819:PsiDirectoryNode" />
+              <item name="newSwing" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kroutled" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Swingy" type="462c0819:PsiDirectoryNode" />
+              <item name="newSwing" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kroutled" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Swingy" type="462c0819:PsiDirectoryNode" />
+              <item name="newSwing" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kroutled" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Swingy" type="462c0819:PsiDirectoryNode" />
+              <item name="newSwing" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kroutled" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Swingy" type="462c0819:PsiDirectoryNode" />
+              <item name="newSwing" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -267,7 +284,7 @@
             </path>
             <path>
               <item name="kroutled" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Swingy" type="462c0819:PsiDirectoryNode" />
+              <item name="newSwing" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -276,7 +293,7 @@
             </path>
             <path>
               <item name="kroutled" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Swingy" type="462c0819:PsiDirectoryNode" />
+              <item name="newSwing" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -286,7 +303,7 @@
             </path>
             <path>
               <item name="kroutled" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Swingy" type="462c0819:PsiDirectoryNode" />
+              <item name="newSwing" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -297,7 +314,7 @@
             </path>
             <path>
               <item name="kroutled" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Swingy" type="462c0819:PsiDirectoryNode" />
+              <item name="newSwing" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -308,19 +325,7 @@
             </path>
             <path>
               <item name="kroutled" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Swingy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="co" type="462c0819:PsiDirectoryNode" />
-              <item name="za" type="462c0819:PsiDirectoryNode" />
-              <item name="kroutled" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="artefacts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kroutled" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Swingy" type="462c0819:PsiDirectoryNode" />
+              <item name="newSwing" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -332,7 +337,7 @@
             </path>
             <path>
               <item name="kroutled" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Swingy" type="462c0819:PsiDirectoryNode" />
+              <item name="newSwing" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -341,12 +346,27 @@
               <item name="kroutled" type="462c0819:PsiDirectoryNode" />
               <item name="Utilities" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="kroutled" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newSwing" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="co" type="462c0819:PsiDirectoryNode" />
+              <item name="za" type="462c0819:PsiDirectoryNode" />
+              <item name="kroutled" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kroutled" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newSwing" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -399,7 +419,7 @@
     <configuration name="GameTest" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="co.za.kroutled.controller.Game" />
       <module name="swingy" />
-      <option name="PROGRAM_PARAMETERS" value="cli test.txt" />
+      <option name="PROGRAM_PARAMETERS" value="gui test.txt" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -521,19 +541,20 @@
       <workItem from="1531729095900" duration="16032000" />
       <workItem from="1531753932288" duration="1653000" />
       <workItem from="1531813282510" duration="11394000" />
+      <workItem from="1532936130025" duration="2528000" />
+      <workItem from="1532951135403" duration="177000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106915000" />
+    <option name="totallyTimeSpent" value="109620000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
+    <frame x="46" y="24" width="1920" height="977" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.319403" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
@@ -541,11 +562,12 @@
       <window_info anchor="right" id="Maven Projects" order="8" weight="0.3292683" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21691543" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.24772727" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.1721393" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15654951" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15974441" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -559,33 +581,34 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32935324" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.319403" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32935324" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21691543" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15654951" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21691543" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="UI Designer" order="4" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.1721393" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Capture Tool" order="6" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32935324" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.319403" />
       <window_info anchor="right" id="Maven Projects" order="8" weight="0.3292683" />
       <window_info id="Favorites" order="5" side_tool="true" />
@@ -780,21 +803,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/kroutled/model/heroes/Cavedweller.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/kroutled/controller/App.java" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/co/za/kroutled/model/artefacts/EArtefacts.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/co/za/kroutled/view/Window.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/co/za/kroutled/model/characters/Hunter.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/co/za/kroutled/controller/Utilities.java" />
     <entry file="file://$PROJECT_DIR$/lol.txt" />
@@ -808,16 +817,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/co/za/kroutled/Utilities/Reader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/co/za/kroutled/Utilities/Reader.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/co/za/kroutled/model/characters/Mage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -864,19 +864,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/co/za/kroutled/controller/Battle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1145">
-          <caret line="34" column="34" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/co/za/kroutled/model/Map.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1325">
+        <state relative-caret-position="1995">
           <caret line="158" column="42" selection-start-line="158" selection-start-column="42" selection-end-line="158" selection-end-column="42" />
         </state>
       </provider>
@@ -888,68 +878,91 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/co/za/kroutled/model/characters/Character.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="95" selection-start-line="95" selection-end-line="95" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/co/za/kroutled/model/artefacts/Artefact.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
+        <state relative-caret-position="330">
           <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/co/za/kroutled/model/characters/Hero.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1380">
+        <state relative-caret-position="1275">
           <caret line="104" column="5" selection-start-line="104" selection-start-column="5" selection-end-line="104" selection-end-column="5" />
-          <folding>
-            <element signature="e#2128#2129#0" expanded="true" />
-            <element signature="e#2150#2151#0" expanded="true" />
-            <element signature="e#2195#2196#0" expanded="true" />
-            <element signature="e#2222#2223#0" expanded="true" />
-            <element signature="e#2269#2270#0" expanded="true" />
-            <element signature="e#2294#2295#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/co/za/kroutled/Utilities/Writer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="74" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/co/za/kroutled/controller/Loadgame.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/co/za/kroutled/controller/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="46" lean-forward="true" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
+        <state relative-caret-position="1080">
+          <caret line="80" column="17" selection-start-line="80" selection-start-column="17" selection-end-line="80" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/co/za/kroutled/controller/Game.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/co/za/kroutled/controller/Loadgame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="590">
-          <caret line="80" column="49" selection-start-line="80" selection-start-column="49" selection-end-line="80" selection-end-column="49" />
+        <state relative-caret-position="195">
+          <caret line="23" column="67" selection-start-line="23" selection-start-column="67" selection-end-line="23" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/co/za/kroutled/Utilities/Writer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/co/za/kroutled/controller/Battle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1665">
+          <caret line="119" column="38" selection-start-line="119" selection-start-column="38" selection-end-line="119" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/co/za/kroutled/view/Window.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2355">
+          <caret line="719" column="49" selection-start-line="719" selection-start-column="49" selection-end-line="719" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="16" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/co/za/kroutled/model/characters/Character.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="31" column="31" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
+          <folding>
+            <element signature="e#2065#2066#0" expanded="true" />
+            <element signature="e#2098#2099#0" expanded="true" />
           </folding>
         </state>
       </provider>

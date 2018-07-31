@@ -21,7 +21,7 @@ public class Loadgame {
         List<Hero> heros = new ArrayList<>();
         try
         {
-            BufferedReader br = new BufferedReader(new FileReader("/home/kyle/dev/java/Swingy/test.txt"));
+            BufferedReader br = new BufferedReader(new FileReader("test.txt"));
             String loadHero;
             while ((loadHero = br.readLine()) != null)
             {
