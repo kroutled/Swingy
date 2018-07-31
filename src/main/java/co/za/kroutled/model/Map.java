@@ -31,7 +31,7 @@ public class Map {
 
     public void moveDown()
     {
-        hero.setYPos(hero.getYPos() + 1 );
+        hero.setYPos(hero.getYPos() + 1);
     }
 
     public void moveLeft()

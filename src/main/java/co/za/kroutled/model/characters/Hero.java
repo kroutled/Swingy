@@ -58,7 +58,7 @@ public class Hero extends Character {
 
     public int setXp(int val)
     {
-        System.out.println(this.neededXP);
+        //System.out.println(this.neededXP);s
         this.xp += val;
         if (this.xp >= this.neededXP)
         {

@@ -821,7 +821,6 @@ public class Window extends javax.swing.JFrame {
         stats += "Artefact: " + myHero.getArtefact() + "\n";
         stats += "X: " + myHero.getXPos() + "\n";
         stats += "Y: " + myHero.getYPos() + "\n";
-        stats += fight.droppedArtefact + "\n";
         
         gameStats.setEditable(false);
         gameStats.setText(stats);

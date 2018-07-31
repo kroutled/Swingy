@@ -82,7 +82,9 @@ public class Game {
                 }
                 int chosen = scan.nextInt();
                 myHero = heros.get(chosen - 1);
+                System.out.println(myHero.getName());
                 map = new Map(myHero);
+                map.newLevel(myHero);
             }
             scan = new Scanner(System.in);
             utils.sleep(1000);
