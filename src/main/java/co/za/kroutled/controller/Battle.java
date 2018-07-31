@@ -75,16 +75,16 @@ public class Battle {
              dropArtefact(hero);
              if (lvledUp == 1)
              {
-                 System.out.println("You defeated the enemy and gained " + xpGained + "expirience!");
+                 System.out.println("You defeated the enemy and gained " + xpGained + " experience!");
                  System.out.println("Congratulations!!!! You have leveled up to level " + hero.getLvl());
-                 guiFight += "You defeated the enemy and gained " + xpGained + " expirience!" + "\n" + 
+                 guiFight += "You defeated the enemy and gained " + xpGained + " experience!" + "\n" + 
                          "Congratulations!!!! You have leveled up to level " + hero.getLvl();
                  return 1;
              }
              else
              {
-                 System.out.println("You defeated the enemy and gained " + xpGained + " expirience!");
-                 guiFight += "You defeated the enemy and gained " + xpGained + " expirience!";
+                 System.out.println("You defeated the enemy and gained " + xpGained + " experience!");
+                 guiFight += "You defeated the enemy and gained " + xpGained + " experience!";
                  return 0;
              }
          }
